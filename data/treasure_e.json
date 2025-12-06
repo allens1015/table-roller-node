@@ -3,6 +3,7 @@
     "name":"light_armor",
     "modifier":"masterwork",
     "value":150,
+    "max_value":200,
     "weight":1,
     "type":"table"
   },
@@ -10,6 +11,7 @@
     "name":"med_armor",
     "modifier":"masterwork",
     "value":150,
+    "max_value":300,
     "weight":1,
     "type":"table"
   },
@@ -17,12 +19,14 @@
     "name":"heavy_armor",
     "modifier":"masterwork",
     "value":150,
+    "max_value":1000,
     "weight":1,
     "type":"table"
   },
   {
     "name":"shields",
     "weight":1,
+    "max_value":200,
     "type":"table"
   }
 ]
