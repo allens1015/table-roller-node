@@ -1,0 +1,68 @@
+[
+  {
+    "name":"Haramaki",
+    "type":"item",
+    "weight":2,
+    "value":3
+  },
+  {
+    "name":"Padded",
+    "type":"item",
+    "weight":3,
+    "value":5
+  },
+  {
+    "name":"Quilted cloth",
+    "type":"item",
+    "weight":3,
+    "value":100
+  },
+  {
+    "name":"Silken ceremonial",
+    "type":"item",
+    "weight":2,
+    "value":30
+  },
+  {
+    "name":"Lamellar cuirass",
+    "type":"item",
+    "weight":2,
+    "value":15
+  },
+  {
+    "name":"Leather",
+    "type":"item",
+    "weight":5,
+    "value":10
+  },
+  {
+    "name":"Parade",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Studded leather",
+    "type":"item",
+    "weight":5,
+    "value":25
+  },
+  {
+    "name":"Wooden",
+    "type":"item",
+    "weight":4,
+    "value":20
+  },
+  {
+    "name":"Chain shirt",
+    "type":"item",
+    "weight":3,
+    "value":100
+  },
+  {
+    "name":"Lamellar (leather)",
+    "type":"item",
+    "weight":3,
+    "value":60
+  }
+]

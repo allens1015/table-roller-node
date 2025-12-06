@@ -1,0 +1,86 @@
+[
+  {
+    "name":"Armored coat",
+    "type":"item",
+    "weight":1,
+    "value":50
+  },
+  {
+    "name":"Chain coat",
+    "type":"item",
+    "weight":1,
+    "value":75
+  },
+  {
+    "name":"Erutaki coat",
+    "type":"item",
+    "weight":1,
+    "value":80
+  },
+  {
+    "name":"Hide",
+    "type":"item",
+    "weight":1,
+    "value":15
+  },
+  {
+    "name":"Do-maru",
+    "type":"item",
+    "weight":1,
+    "value":200
+  },
+  {
+    "name":"Kikko",
+    "type":"item",
+    "weight":1,
+    "value":250
+  },
+  {
+    "name":"Lamellar (horn)",
+    "type":"item",
+    "weight":1,
+    "value":100
+  },
+  {
+    "name":"Scale mail",
+    "type":"item",
+    "weight":1,
+    "value":50
+  },
+  {
+    "name":"Agile breastplate",
+    "type":"item",
+    "weight":1,
+    "value":400
+  },
+  {
+    "name":"Breastplate",
+    "type":"item",
+    "weight":1,
+    "value":200
+  },
+  {
+    "name":"Chainmail",
+    "type":"item",
+    "weight":1,
+    "value":150
+  },
+  {
+    "name":"Four-mirror",
+    "type":"item",
+    "weight":1,
+    "value":125
+  },
+  {
+    "name":"Lamellar (steel)",
+    "type":"item",
+    "weight":1,
+    "value":150
+  },
+  {
+    "name":"Mountain pattern",
+    "type":"item",
+    "weight":1,
+    "value":250
+  }
+]

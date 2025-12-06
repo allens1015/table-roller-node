@@ -1,0 +1,15 @@
+{
+  "name": "table-roller-node",
+  "version": "1.0.0",
+  "description": "A weighted random table roller",
+  "main": "index.js",
+  "bin": {
+    "table-roller-node": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["random", "table", "roller"],
+  "author": "",
+  "license": "ISC"
+}

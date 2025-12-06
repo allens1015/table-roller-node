@@ -1,0 +1,92 @@
+[
+  {
+    "name":"Buckler",
+    "type":"item",
+    "weight":1,
+    "value":5
+  },
+  {
+    "name":"Klar",
+    "type":"item",
+    "weight":1,
+    "value":12
+  },
+  {
+    "name":"Light steel",
+    "type":"item",
+    "weight":1,
+    "value":9
+  },
+  {
+    "name":"Light steel quickdraw",
+    "type":"item",
+    "weight":1,
+    "value":59
+  },
+  {
+    "name":"Light wooden",
+    "type":"item",
+    "weight":1,
+    "value":3
+  },
+  {
+    "name":"Light wooden quickdraw",
+    "type":"item",
+    "weight":1,
+    "value":53
+  },
+  {
+    "name":"Madu (leather)",
+    "type":"item",
+    "weight":1,
+    "value":40
+  },
+  {
+    "name":"Madu (steel)",
+    "type":"item",
+    "weight":1,
+    "value":50
+  },
+  {
+    "name":"Poisoner's Buckler",
+    "type":"item",
+    "weight":1,
+    "value":1505
+  },
+  {
+    "name":"War-shield, dwarven",
+    "type":"item",
+    "weight":1,
+    "value":50
+  },
+  {
+    "name":"Heavy steel",
+    "type":"item",
+    "weight":1,
+    "value":20
+  },
+  {
+    "name":"Heavy wooden",
+    "type":"item",
+    "weight":1,
+    "value":7
+  },
+  {
+    "name":"Snarlshield, steel",
+    "type":"item",
+    "weight":1,
+    "value":50
+  },
+  {
+    "name":"Snarlshield, wooden",
+    "type":"item",
+    "weight":1,
+    "value":37
+  },
+  {
+    "name":"Tower",
+    "type":"item",
+    "weight":1,
+    "value":30
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "name":"Banded mail",
+    "type":"item",
+    "weight":1,
+    "value":250
+  },
+  {
+    "name":"Field plate",
+    "type":"item",
+    "weight":1,
+    "value":1200
+  },
+  {
+    "name":"Kusari gusoku",
+    "type":"item",
+    "weight":1,
+    "value":350
+  },
+  {
+    "name":"Lamellar (iron)",
+    "type":"item",
+    "weight":1,
+    "value":200
+  },
+  {
+    "name":"Splint mail",
+    "type":"item",
+    "weight":1,
+    "value":200
+  },
+  {
+    "name":"Tatami-do",
+    "type":"item",
+    "weight":1,
+    "value":1000
+  },
+  {
+    "name":"Agile half-plate",
+    "type":"item",
+    "weight":1,
+    "value":850
+  },
+  {
+    "name":"Alkenstar fortress plate",
+    "type":"item",
+    "weight":1,
+    "value":2100
+  },
+  {
+    "name":"Half-plate",
+    "type":"item",
+    "weight":1,
+    "value":600
+  },
+  {
+    "name":"Hellknight half-plate",
+    "type":"item",
+    "weight":1,
+    "value":850
+  },
+  {
+    "name":"Lamellar (stone)",
+    "type":"item",
+    "weight":1,
+    "value":500
+  },
+  {
+    "name":"O-yoroi",
+    "type":"item",
+    "weight":1,
+    "value":1700
+  },
+  {
+    "name":"Full plate",
+    "type":"item",
+    "weight":1,
+    "value":1500
+  },
+  {
+    "name":"Gray maiden plate",
+    "type":"item",
+    "weight":1,
+    "value":1500
+  },
+  {
+    "name":"Hellknight plate",
+    "type":"item",
+    "weight":1,
+    "value":2000
+  },
+  {
+    "name":"Stoneplate",
+    "type":"item",
+    "weight":1,
+    "value":1800
+  }
+]

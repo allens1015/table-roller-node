@@ -1,0 +1,27 @@
+[
+  {
+    "name":"light_armor",
+    "weight":33,
+    "type":"table"
+  },
+  {
+    "name":"med_armor",
+    "weight":33,
+    "type":"table"
+  },
+  {
+    "name":"heavy_armor",
+    "weight":33,
+    "type":"table"
+  },
+  {
+    "name":"shields",
+    "weight":33,
+    "type":"table"
+  },
+  {
+    "name":"wacky_armor",
+    "weight":33,
+    "type":"item"
+  }
+]
