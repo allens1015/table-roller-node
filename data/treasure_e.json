@@ -1,0 +1,28 @@
+[
+  {
+    "name":"light_armor",
+    "modifier":"masterwork",
+    "value":150,
+    "weight":1,
+    "type":"table"
+  },
+  {
+    "name":"med_armor",
+    "modifier":"masterwork",
+    "value":150,
+    "weight":1,
+    "type":"table"
+  },
+  {
+    "name":"heavy_armor",
+    "modifier":"masterwork",
+    "value":150,
+    "weight":1,
+    "type":"table"
+  },
+  {
+    "name":"shields",
+    "weight":1,
+    "type":"table"
+  }
+]

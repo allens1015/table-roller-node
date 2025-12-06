@@ -17,7 +17,7 @@ function weightedRandom(items) {
   }
 }
 
-function rollTable(tableName, breadcrumb = []) {
+function rollTable(tableName, breadcrumb = [], modifiers = []) {
   breadcrumb.push(tableName);
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
@@ -27,12 +27,18 @@ function rollTable(tableName, breadcrumb = []) {
   // If the selected item is a table, recursively roll on that table
   while (selectedItem.type === 'table') {
     breadcrumb.push(selectedItem.name);
+
+    // If the selected item has a modifier, add it to the modifiers array
+    if (selectedItem.modifier) {
+      modifiers.push(selectedItem.modifier);
+    }
+
     const nestedTablePath = path.join(__dirname, 'data', `${selectedItem.name}.json`);
     const nestedTableData = JSON.parse(fs.readFileSync(nestedTablePath, 'utf8'));
     selectedItem = weightedRandom(nestedTableData);
   }
 
-  return { item: selectedItem, breadcrumb };
+  return { item: selectedItem, breadcrumb, modifiers };
 }
 
 // Parse command line arguments
@@ -42,6 +48,10 @@ const originTable = argv.o || argv.origin || 'armor';
 // Start by rolling on the specified origin table
 const result = rollTable(originTable);
 
+// Build the final item name with modifiers as prefix
+const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
+const finalItemName = modifierPrefix + result.item.name;
+
 // Output the breadcrumb trail and the selected item's name
-console.log(`${result.breadcrumb.join(' > ')} > ${result.item.name}`);
+console.log(`${result.breadcrumb.join(' > ')} > ${finalItemName}`);
 
