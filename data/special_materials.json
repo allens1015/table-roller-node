@@ -1,13 +1,25 @@
 [
   {
     "name":"Adamantine",
-    "value":[
-        {"ammunition":60},
-        {"light_armor":5000},
-        {"med_armor":10000},
-        {"heavy_armor":15000},
-        {"weapons":3000}
-    ],
+    "value":{
+        "ammunition":60,
+        "light_armor":5000,
+        "med_armor":10000,
+        "heavy_armor":15000,
+        "weapons":3000
+    },
+    "weight":1
+  },
+  {
+    "name":"Alchemical Silver",
+    "value":{
+        "ammunition":2,
+        "light_weapon":20,
+        "one_handed_weapon":90,
+        "double_weapon_one_head":90,
+        "two_handed_weapon":180,
+        "double_weapon_both_heads":180
+    },
     "weight":1
   },
   {
@@ -15,6 +27,35 @@
     "value":{
         "light_armor":1000,
         "med_armor":2000
+    },
+    "weight":1
+  },
+  {
+    "name":"Blood Crystal",
+    "value":{
+        "ammunition":30,
+        "weapon":2000
+    },
+    "weight":1
+  },
+  {
+    "name":"Cold Iron",
+    "value":{
+        "weapon":"2x",
+        "double_weapon_one_head":"1.5x",
+        "light_armor":"2x",
+        "med_armor":"2x",
+        "heavy_armor":"2x"
+    },
+    "weight":1
+  },
+  {
+    "name":"Darkleaf Cloth",
+    "value":{
+        "clothing":500,
+        "light_armor":750,
+        "med_armor":1500,
+        "_comment":"should have an other items entry at +375/lb"
     },
     "weight":1
   }

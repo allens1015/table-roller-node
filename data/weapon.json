@@ -1,0 +1,12 @@
+[
+  {
+    "name":"one_handed_weapon",
+    "weight":1,
+    "type":"table"
+  },
+  {
+    "name":"two_handed_weapon",
+    "weight":1,
+    "type":"table"
+  }
+]
