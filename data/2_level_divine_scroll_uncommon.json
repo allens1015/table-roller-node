@@ -2,186 +2,223 @@
   {
     "name":"Animal aspect",
     "type":"item",
-    "weight":4
+    "weight":4,
+  "value":150
   },
   {
     "name":"Animal trance",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Animate dead, lesser",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":150
   },
   {
     "name":"Arrow of law",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Aspect of the bear",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":150
   },
   {
     "name":"Blessing of courage and life",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Calm emotions",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":150
   },
   {
     "name":"Death knell",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Dread bolt",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Effortless armor",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":150
   },
   {
     "name":"Enthrall",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Flaming sphere",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":150
   },
   {
     "name":"Gentle repose",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Grace",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Groundswell",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Gust of wind",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Instant armor",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Instrument of agony",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Make whole",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Reduce animal",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Scent trail",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Shard of chaos",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Share language",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Shatter",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Soften earth and stone",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Spear of purity",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Spider climb",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Status",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Tree shape",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Undetectable alignment",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":150
   },
   {
     "name":"Warp wood",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Weapon of awe",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":150
   },
   {
     "name":"Wood shape",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Consecrate",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Desecrate",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Fire trap",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":150
   },
   {
     "name":"Masterwork transformation",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":150
   }
 ]

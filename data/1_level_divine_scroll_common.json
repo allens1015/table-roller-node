@@ -2,136 +2,163 @@
   {
     "name":"Bane",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Bless",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":25
   },
   {
     "name":"Cause fear",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Command",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Comprehend languages",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Cure light wounds",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":25
   },
   {
     "name":"Detect chaos",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Detect evil",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Detect good",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Detect law",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Detect undead",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Divine favor",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Doom",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Entangle",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Inflict light wounds",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Magic fang",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Obscuring mist",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Produce flame",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Protection from chaos",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Protection from evil",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Protection from good",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Protection from law",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Remove fear",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Sanctuary",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Shield of faith",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":25
   },
   {
     "name":"Summon monster I",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Summon nature's ally I",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   }
 ]

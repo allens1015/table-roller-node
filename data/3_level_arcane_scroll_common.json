@@ -2,141 +2,169 @@
   {
     "name":"Beast shape I",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Blink",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Dispel magic",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":450
   },
   {
     "name":"Displacement",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Fireball",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":450
   },
   {
     "name":"Flame arrow",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Fly",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":450
   },
   {
     "name":"Gaseous form",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Haste",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Heroism",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Hold person",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Invisibility sphere",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Lightning bolt",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":450
   },
   {
     "name":"Magic circle against chaos",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Magic circle against evil",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Magic circle against good",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Magic circle against law",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Major image",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Phantom steed",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Protection from energy",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Slow",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Stinking cloud",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Suggestion",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Summon monster III",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Tiny hut",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Tongues",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":450
   },
   {
     "name":"Vampiric touch",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   },
   {
     "name":"Water breathing",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":450
   }
 ]

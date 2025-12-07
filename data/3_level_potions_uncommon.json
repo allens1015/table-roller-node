@@ -2,46 +2,55 @@
   {
     "name":"Burrow",
     "type":"item",
-    "weight":12
+    "weight":12,
+    "value":750
   },
   {
     "name":"Countless eyes",
     "type":"item",
-    "weight":10
+    "weight":10,
+    "value":750
   },
   {
     "name":"Daylight",
     "type":"item",
-    "weight":12
+    "weight":12,
+    "value":750
   },
   {
     "name":"Draconic reservoir",
     "type":"item",
-    "weight":15
+    "weight":15,
+    "value":750
   },
   {
     "name":"Flame arrow",
     "type":"item",
-    "weight":9
+    "weight":9,
+    "value":750
   },
   {
     "name":"Shrink item",
     "type":"item",
-    "weight":9
+    "weight":9,
+    "value":750
   },
   {
     "name":"Stone shape",
     "type":"item",
-    "weight":10
+    "weight":10,
+    "value":750
   },
   {
     "name":"Fire trap",
     "type":"item",
-    "weight":10
+    "weight":10,
+    "value":750
   },
   {
     "name":"Nondetection",
     "type":"item",
-    "weight":13
+    "weight":13,
+    "value":750
   }
 ]

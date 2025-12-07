@@ -2,31 +2,37 @@
   {
     "name":"Detect poison",
     "type":"item",
-    "weight":15
+    "weight":15,
+    "value":12.5
   },
   {
     "name":"Flare",
     "type":"item",
-    "weight":18
+    "weight":18,
+    "value":12.5
   },
   {
     "name":"Guidance",
     "type":"item",
-    "weight":17
+    "weight":17,
+    "value":12.5
   },
   {
     "name":"Resistance",
     "type":"item",
-    "weight":18
+    "weight":18,
+    "value":12.5
   },
   {
     "name":"Spark",
     "type":"item",
-    "weight":17
+    "weight":17,
+    "value":12.5
   },
   {
     "name":"Virtue",
     "type":"item",
-    "weight":15
+    "weight":15,
+    "value":12.5
   }
 ]

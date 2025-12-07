@@ -2,131 +2,157 @@
   {
     "name":"Burning hands",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Cause fear",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Charm person",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Chill touch",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Disguise self",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Endure elements",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Enlarge person",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Expeditious retreat",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Grease",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Hypnotism",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Identify",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Mage armor",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":25
   },
   {
     "name":"Magic missile",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":25
   },
   {
     "name":"Magic weapon",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Obscuring mist",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Protection from chaos",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Protection from evil",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Protection from good",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Protection from law",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Ray of enfeeblement",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25  
   },
   {
     "name":"Shield",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Shocking grasp",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Silent image",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Sleep",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":25
   },
   {
     "name":"Summon monster I",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"True strike",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25  
   }
 ]

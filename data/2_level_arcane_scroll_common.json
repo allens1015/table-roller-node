@@ -2,146 +2,175 @@
   {
     "name":"Acid arrow",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Alter self",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Bear's endurance",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":200
   },
   {
     "name":"Blur",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Bull's strength",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":200
   },
   {
     "name":"Cat's grace",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Darkness",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Darkvision",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Eagle's splendor",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"False life",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Flaming sphere",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Fox's cunning",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Glitterdust",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Invisibility",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":200
   },
   {
     "name":"Knock",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":200
   },
   {
     "name":"Levitate",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Minor image",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Mirror image",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Owl's wisdom",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Resist energy",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":200
   },
   {
     "name":"Rope trick",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":200
   },
   {
     "name":"Scorching ray",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":200
   },
   {
     "name":"See invisibility",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Shatter",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":200
   },
   {
     "name":"Spider climb",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Summon monster II",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":200
   },
   {
     "name":"Summon swarm",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":200
   },
   {
     "name":"Web",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":200
   },
   {
     "name":"Whispering wind",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":200
   }
 ]

@@ -2,126 +2,151 @@
   {
     "name":"Absorb toxicity",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Antiplant shell",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":700
   },
   {
     "name":"Aspect of the stag",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":700
   },
   {
     "name":"Aura of doom",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Ball lightning",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":700
   },
   {
     "name":"Blessing of fervor",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Blight",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Command plants",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Control water",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Debilitating portent",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Giant vermin",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Ice storm",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":700
   },
   {
     "name":"Imbue with spell ability",
     "type":"item",
-    "weight":6
+    "weight":6,
+    "value":700
   },
   {
     "name":"Plague carrier",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Planar adaptation",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Protection from energy, communal",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Reincarnate",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":700
   },
   {
     "name":"Repel vermin",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Rusting grasp",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Scrying",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":700
   },
   {
     "name":"Sending",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":700
   },
   {
     "name":"Spiritual ally",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Thorn body",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":700
   },
   {
     "name":"Volcanic storm",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":700
   },
   {
     "name":"Symbol of slowing",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":700
   }
 ]

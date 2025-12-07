@@ -2,176 +2,211 @@
   {
     "name":"Ant haul",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Aspect of the falcon",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Calm animals",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Charm animal",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Compel hostility",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Deathwatch",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Detect animals or plants",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":25
   },
   {
     "name":"Detect snares and pits",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Diagnose disease",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Endure elements",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Entropic shield",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Faerie fire",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Feather step",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Forbid action",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Frostbite",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Goodberry",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Hide from animals",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":25
   },
   {
     "name":"Hide from undead",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Hydraulic push",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Jump",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Keen senses",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25  
   },
   {
     "name":"Liberating command",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Longstrider",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Magic stone",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Pass without trace",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Remove sickness",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Sanctify corpse",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":25
   },
   {
     "name":"Shillelagh",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   },
   {
     "name":"Speak with animals",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Stone fist",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":25
   },
   {
     "name":"Stone shield",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Sun metal",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Touch of the sea",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Bless water",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":25
   },
   {
     "name":"Curse water",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":25
   }
 ]

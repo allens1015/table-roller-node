@@ -2,141 +2,169 @@
   {
     "name":"Beast shape II",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Bestow curse",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Black tentacles",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Charm monster",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Confusion",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Crushing despair",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Dimension door",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Dimensional anchor",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Elemental body I",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Enervation",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Enlarge person, mass",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Fear",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Fire shield",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Globe of invulnerability, lesser",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Ice storm",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Invisibility, greater",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Phantasmal killer",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Resilient sphere",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Scrying",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Shadow conjuration",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Shout",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Solid fog",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Stone shape",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Summon monster IV",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Wall of fire",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Wall of ice",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Stoneskin",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Animate dead",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   }
 ]

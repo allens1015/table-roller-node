@@ -2,156 +2,187 @@
   {
     "name":"Acid pit",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Arcane eye",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Ball lightning",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Contagion",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Darkvision, greater",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Detect scrying",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Dragon’s breath",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"False life, greater",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Firefall",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Geas, lesser",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Ghost wolf",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Hallucinatory terrain",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Illusory wall",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Locate creature",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Minor creation",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Monstrous physique II",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Obsidian flow",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Phantom chariot",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Rainbow pattern",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Reduce person, mass",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Remove curse",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Secure shelter",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Shadow projection",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Shocking image",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Telekinetic charge",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"True form",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Vermin shape I",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":800
   },
   {
     "name":"Volcanic storm",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":800
   },
   {
     "name":"Wandering star motes",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":800
   },
   {
     "name":"Fire trap",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":800
   },
   {
     "name":"Mnemonic enhancer",
     "type":"item",
-    "weight":1
+    "weight":1,
+    "value":800
   }
 ]

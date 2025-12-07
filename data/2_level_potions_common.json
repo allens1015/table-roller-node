@@ -2,121 +2,145 @@
   {
     "name":"Aid",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Align weapon",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":300
   },
   {
     "name":"Barkskin",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Bear's endurance",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300       
   },
   {
     "name":"Blur",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Bull's strength",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Cat's grace",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Cure moderate wounds",
     "type":"item",
-    "weight":7
+    "weight":7,
+    "value":300
   },
   {
     "name":"Darkvision",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Delay poison",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":300
   },
   {
     "name":"Eagle's splendor",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Fox's cunning",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Invisibility",
     "type":"item",
-    "weight":7
+    "weight":7,
+    "value":300
   },
   {
     "name":"Levitate",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Owl's wisdom",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Protection from arrows",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":300
   },
   {
     "name":"Remove paralysis",
     "type":"item",
-    "weight":3
+    "weight":3,
+    "value":300
   },
   {
     "name":"Resist energy, acid",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Resist energy, cold",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Resist energy, electricity",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Resist energy, fire",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Resist energy, sonic",
     "type":"item",
-    "weight":5
+    "weight":5,
+    "value":300
   },
   {
     "name":"Spider climb",
     "type":"item",
-    "weight":4
+    "weight":4,
+    "value":300
   },
   {
     "name":"Undetectable alignment",
     "type":"item",
-    "weight":2
+    "weight":2,
+    "value":300
   }
 ]
