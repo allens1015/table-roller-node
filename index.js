@@ -6,7 +6,16 @@ const minimist = require('minimist');
 
 function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare']) {
   // Filter items based on allowed rarities (assume 'common' if no rarity property)
+  // Arrays and objects with 'items' property are always included (they represent sets of items)
   const filteredItems = items.filter(item => {
+    // If it's an array (a set of items), always include it
+    if (Array.isArray(item)) {
+      return true;
+    }
+    // If it's an object with 'items' property (weighted set), always include it
+    if (item.items && Array.isArray(item.items)) {
+      return true;
+    }
     const rarity = item.rarity || 'common';
     return allowedRarities.includes(rarity);
   });
@@ -14,41 +23,30 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
   // If no items match the allowed rarities, fall back to all items
   const itemsToUse = filteredItems.length > 0 ? filteredItems : items;
 
-  const totalWeight = itemsToUse.reduce((sum, item) => sum + item.weight, 0);
+  // Calculate total weight
+  const totalWeight = itemsToUse.reduce((sum, item) => {
+    if (Array.isArray(item)) {
+      // For bare arrays, use weight 1 as default
+      return sum + 1;
+    }
+    // For objects with 'items' property or regular items, use their weight
+    return sum + item.weight;
+  }, 0);
+
   const random = Math.floor(Math.random() * totalWeight);
 
   let currentWeight = 0;
   for (const item of itemsToUse) {
-    currentWeight += item.weight;
+    const itemWeight = Array.isArray(item) ? 1 : item.weight;
+    currentWeight += itemWeight;
     if (random < currentWeight) {
       return item;
     }
   }
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20) {
-  breadcrumb.push(tableName);
-
-  const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
-  const tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
-
-  // Determine allowed rarities based on random roll
-  // Each rarity gets an exclusive percentage chance
-  const rarityRoll = Math.random() * 100;
-  let allowedRarities = ['common'];
-  if (rarityRoll < rareChance) {
-    // Rare chance: only rare items
-    allowedRarities = ['rare'];
-  } else if (rarityRoll < rareChance + uncommonChance) {
-    // Uncommon chance: only uncommon items
-    allowedRarities = ['uncommon'];
-  } else {
-    // Common chance: only common items (remaining percentage)
-    allowedRarities = ['common'];
-  }
-
-  let selectedItem = weightedRandom(tableData, allowedRarities);
-
+// Helper function to process a single selected item through tables and modifiers
+function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities) {
   // Check if user max value is exceeded by this selection's max_value or min_value
   if (userMaxValue && selectedItem.max_value && selectedItem.max_value > userMaxValue) {
     return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
@@ -145,6 +143,59 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
   return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
 }
 
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20) {
+  breadcrumb.push(tableName);
+
+  const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
+  const tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
+
+  // Determine allowed rarities based on random roll
+  // Each rarity gets an exclusive percentage chance
+  const rarityRoll = Math.random() * 100;
+  let allowedRarities = ['common'];
+  if (rarityRoll < rareChance) {
+    // Rare chance: only rare items
+    allowedRarities = ['rare'];
+  } else if (rarityRoll < rareChance + uncommonChance) {
+    // Uncommon chance: only uncommon items
+    allowedRarities = ['uncommon'];
+  } else {
+    // Common chance: only common items (remaining percentage)
+    allowedRarities = ['common'];
+  }
+
+  let selectedItem = weightedRandom(tableData, allowedRarities);
+
+  // Check if the selected item is an array (set of items to generate)
+  // or an object with an 'items' property (weighted set)
+  let itemsToProcess = null;
+
+  if (Array.isArray(selectedItem)) {
+    // Bare array - use it directly
+    itemsToProcess = selectedItem;
+  } else if (selectedItem.items && Array.isArray(selectedItem.items)) {
+    // Object with 'items' property - extract the array
+    itemsToProcess = selectedItem.items;
+  }
+
+  if (itemsToProcess) {
+    // Process each item in the set and return multiple results
+    const setResults = [];
+    for (const itemInSet of itemsToProcess) {
+      // Process this item as if it were selected directly
+      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities);
+      if (itemResult) {
+        setResults.push(itemResult);
+      }
+    }
+    // Return a special marker indicating this is a set of results
+    return { isSet: true, setResults };
+  }
+
+  // Process the single selected item
+  return processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities);
+}
+
 // Parse command line arguments
 const argv = minimist(process.argv.slice(2));
 const originTable = argv.o || argv.origin || 'armor';
@@ -180,7 +231,7 @@ for (let i = 0; i < numResultSets; i++) {
     let result;
     let rollAttempts = 0;
 
-    // Try to roll a single item that fits within remaining budget
+    // Try to roll a single item (or set of items) that fits within remaining budget
     do {
       const remainingBudget = userMaxValue ? userMaxValue - accumulatedValue : null;
       result = rollTable(originTable, [], [], 0, null, remainingBudget, null, rareChance, uncommonChance);
@@ -189,17 +240,38 @@ for (let i = 0; i < numResultSets; i++) {
       // Check if we need to reroll
       let shouldReroll = false;
 
-      // If user set a max value and the selection was rejected, reroll
-      if (result.exceeded) {
-        shouldReroll = true;
-      }
-      // If there's a max_value constraint and we've exceeded it, reroll
-      else if (result.maxValue && result.totalValue > result.maxValue) {
-        shouldReroll = true;
-      }
-      // If user set a max value and total would exceed it, reroll
-      else if (remainingBudget && result.totalValue > remainingBudget) {
-        shouldReroll = true;
+      // If this is a set of results, check if any item in the set needs rerolling
+      if (result.isSet) {
+        // Check if any item in the set exceeds constraints
+        let totalSetValue = 0;
+        let setExceeded = false;
+
+        for (const setItem of result.setResults) {
+          if (setItem.exceeded) {
+            setExceeded = true;
+            break;
+          }
+          if (setItem.maxValue && setItem.totalValue > setItem.maxValue) {
+            setExceeded = true;
+            break;
+          }
+          totalSetValue += setItem.totalValue;
+        }
+
+        if (setExceeded || (remainingBudget && totalSetValue > remainingBudget)) {
+          shouldReroll = true;
+        }
+      } else {
+        // Single item - existing logic
+        if (result.exceeded) {
+          shouldReroll = true;
+        }
+        else if (result.maxValue && result.totalValue > result.maxValue) {
+          shouldReroll = true;
+        }
+        else if (remainingBudget && result.totalValue > remainingBudget) {
+          shouldReroll = true;
+        }
       }
 
       if (shouldReroll) {
@@ -216,14 +288,24 @@ for (let i = 0; i < numResultSets; i++) {
     } while (true);
 
     // If we couldn't find a valid item, stop trying to add more
-    if (!result || !result.item) {
+    if (!result || (result.isSet && result.setResults.length === 0) || (!result.isSet && !result.item)) {
       break;
     }
 
     // Add this result to our collection
-    results.push(result);
-    accumulatedValue += result.totalValue;
-    attempts++;
+    if (result.isSet) {
+      // Add all items from the set
+      for (const setItem of result.setResults) {
+        results.push(setItem);
+        accumulatedValue += setItem.totalValue;
+        attempts++;
+      }
+    } else {
+      // Add single item
+      results.push(result);
+      accumulatedValue += result.totalValue;
+      attempts++;
+    }
 
     // Stop conditions:
     // 1. If no user max value is set, stop after one item

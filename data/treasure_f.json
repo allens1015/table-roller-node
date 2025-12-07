@@ -1,0 +1,29 @@
+[
+    {
+        "weight":1,
+        "items":[
+            {
+                "name":"light_armor",
+                "modifier":"masterwork",
+                "value":150,
+                "max_value":200,
+                "weight":1,
+                "type":"table"
+            },
+            {
+                "name":"med_armor",
+                "max_value":200,
+                "weight":1,
+                "type":"table"
+            }
+        ]
+    },
+    {
+        "name":"heavy_armor",
+        "modifier":"masterwork",
+        "value":150,
+        "max_value":1500,
+        "weight":1,
+        "type":"table"
+    }
+]
