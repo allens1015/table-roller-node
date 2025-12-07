@@ -4,12 +4,21 @@ const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 
-function weightedRandom(items) {
-  const totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
+function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare']) {
+  // Filter items based on allowed rarities (assume 'common' if no rarity property)
+  const filteredItems = items.filter(item => {
+    const rarity = item.rarity || 'common';
+    return allowedRarities.includes(rarity);
+  });
+
+  // If no items match the allowed rarities, fall back to all items
+  const itemsToUse = filteredItems.length > 0 ? filteredItems : items;
+
+  const totalWeight = itemsToUse.reduce((sum, item) => sum + item.weight, 0);
   const random = Math.floor(Math.random() * totalWeight);
 
   let currentWeight = 0;
-  for (const item of items) {
+  for (const item of itemsToUse) {
     currentWeight += item.weight;
     if (random < currentWeight) {
       return item;
@@ -22,7 +31,20 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
   const tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
-  let selectedItem = weightedRandom(tableData);
+
+  // Determine allowed rarities based on random roll (10% rare, 20% uncommon, always common)
+  const rarityRoll = Math.random() * 100;
+  let allowedRarities = ['common'];
+  if (rarityRoll < 10) {
+    // 10% chance: can pick rare, uncommon, or common
+    allowedRarities = ['common', 'uncommon', 'rare'];
+  } else if (rarityRoll < 30) {
+    // 20% chance (10-30): can pick uncommon or common
+    allowedRarities = ['common', 'uncommon'];
+  }
+  // Otherwise: only common (70% chance)
+
+  let selectedItem = weightedRandom(tableData, allowedRarities);
 
   // Check if user max value is exceeded by this selection's max_value
   if (userMaxValue && selectedItem.max_value && selectedItem.max_value > userMaxValue) {
@@ -67,7 +89,7 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
     // Track which table we're about to roll on - this becomes our finalItemTable
     finalItemTable = selectedItem.name;
 
-    selectedItem = weightedRandom(nestedTableData);
+    selectedItem = weightedRandom(nestedTableData, allowedRarities);
   }
 
   // Add the final item's value to the total
@@ -166,7 +188,12 @@ for (let i = 0; i < numberOfResults; i++) {
   if (result.item) {
     // Build the final item name with modifiers as prefix
     const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
-    const finalItemName = `${modifierPrefix}${result.item.name} (${result.totalValue}gp)`;
+
+    // Add rarity to the output if it's uncommon or rare
+    const itemRarity = result.item.rarity || 'common';
+    const rarityText = (itemRarity === 'uncommon' || itemRarity === 'rare') ? ` (${itemRarity})` : '';
+
+    const finalItemName = `${modifierPrefix}${result.item.name} (${result.totalValue}gp)${rarityText}`;
 
     // Output the breadcrumb trail and the selected item's name
     console.log(`${result.breadcrumb.join(' > ')} > ${finalItemName}`);
