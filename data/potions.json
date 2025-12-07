@@ -2,31 +2,37 @@
   {
     "name":"lesser_minor_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":25
   },
   {
     "name":"greater_minor_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":25
   },
   {
     "name":"lesser_medium_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":50
   },
   {
     "name":"greater_medium_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":50
   },
   {
     "name":"lesser_major_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":300
   },
   {
     "name":"greater_major_potions",
     "type":"table",
-    "weight":1
+    "weight":1,
+    "min_value":750
   }
 ]
