@@ -17,7 +17,7 @@ function weightedRandom(items) {
   }
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null) {
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null) {
   breadcrumb.push(tableName);
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
@@ -26,8 +26,11 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
   // Check if user max value is exceeded by this selection's max_value
   if (userMaxValue && selectedItem.max_value && selectedItem.max_value > userMaxValue) {
-    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true };
+    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
   }
+
+  // Track modifiers that need special processing (like special_materials)
+  const pendingSpecialModifiers = [];
 
   // If the selected item is a table, recursively roll on that table
   while (selectedItem.type === 'table') {
@@ -35,7 +38,17 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     // If the selected item has a modifier, add it to the modifiers array
     if (selectedItem.modifier) {
-      modifiers.push(selectedItem.modifier);
+      // Handle both string and array modifiers
+      const modifierArray = Array.isArray(selectedItem.modifier) ? selectedItem.modifier : [selectedItem.modifier];
+
+      for (const mod of modifierArray) {
+        if (mod === 'special_materials') {
+          // Store special_materials for later processing
+          pendingSpecialModifiers.push(mod);
+        } else {
+          modifiers.push(mod);
+        }
+      }
     }
 
     // Add the value of items with modifiers to the total
@@ -50,6 +63,10 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     const nestedTablePath = path.join(__dirname, 'data', `${selectedItem.name}.json`);
     const nestedTableData = JSON.parse(fs.readFileSync(nestedTablePath, 'utf8'));
+
+    // Track which table we're about to roll on - this becomes our finalItemTable
+    finalItemTable = selectedItem.name;
+
     selectedItem = weightedRandom(nestedTableData);
   }
 
@@ -58,7 +75,42 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
     totalValue += selectedItem.value;
   }
 
-  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false };
+  // Process special_materials modifiers now that we know the final item table
+  for (const specialMod of pendingSpecialModifiers) {
+    if (specialMod === 'special_materials' && finalItemTable) {
+      const specialMaterialsPath = path.join(__dirname, 'data', 'special_materials.json');
+      const specialMaterialsData = JSON.parse(fs.readFileSync(specialMaterialsPath, 'utf8'));
+
+      // Filter materials that can be applied to this item type
+      const compatibleMaterials = specialMaterialsData.filter(material => {
+        // Handle both array of objects and single object formats
+        if (Array.isArray(material.value)) {
+          return material.value.some(valueObj => finalItemTable in valueObj);
+        } else if (typeof material.value === 'object') {
+          return finalItemTable in material.value;
+        }
+        return false;
+      });
+
+      // If there are compatible materials, select one
+      if (compatibleMaterials.length > 0) {
+        const selectedMaterial = weightedRandom(compatibleMaterials);
+        modifiers.push(selectedMaterial.name);
+
+        // Add the material's value for this specific item type
+        let materialValue = 0;
+        if (Array.isArray(selectedMaterial.value)) {
+          const valueObj = selectedMaterial.value.find(obj => finalItemTable in obj);
+          materialValue = valueObj ? valueObj[finalItemTable] : 0;
+        } else if (typeof selectedMaterial.value === 'object') {
+          materialValue = selectedMaterial.value[finalItemTable] || 0;
+        }
+        totalValue += materialValue;
+      }
+    }
+  }
+
+  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
 }
 
 // Parse command line arguments
@@ -77,7 +129,7 @@ for (let i = 0; i < numberOfResults; i++) {
 
   // Keep rolling until we get a valid result (within max_value) or reach max attempts
   do {
-    result = rollTable(originTable, [], [], 0, null, userMaxValue);
+    result = rollTable(originTable, [], [], 0, null, userMaxValue, null);
     attempts++;
 
     // Check if we need to reroll

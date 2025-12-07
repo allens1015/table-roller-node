@@ -1,0 +1,14 @@
+[
+  {
+    "name":"armor",
+    "modifier":"+1",
+    "value":1150,
+    "weight":8,
+    "type":"table"
+  },
+  {
+    "name":"lesser_minor_specific_armor",    
+    "weight":2,
+    "type":"table"
+  }
+]

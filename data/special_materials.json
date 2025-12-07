@@ -1,0 +1,21 @@
+[
+  {
+    "name":"Adamantine",
+    "value":[
+        {"ammunition":60},
+        {"light_armor":5000},
+        {"med_armor":10000},
+        {"heavy_armor":15000},
+        {"weapons":3000}
+    ],
+    "weight":1
+  },
+  {
+    "name":"Angelskin",
+    "value":{
+        "light_armor":1000,
+        "med_armor":2000
+    },
+    "weight":1
+  }
+]

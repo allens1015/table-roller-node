@@ -1,0 +1,39 @@
+[
+  {
+    "name":"Mithral shirt",
+    "value":1100,
+    "weight":50,
+    "type":"item"
+  },
+  {
+    "name":"Living Steel Heavy Shield",
+    "value":120,
+    "weight":20,
+    "type":"item"
+  },
+  {
+    "name":"Darkwood Buckler",
+    "value":203,
+    "weight":25,
+    "type":"item"
+  },
+  {
+    "name":"Darkwood Shield",
+    "value":257,
+    "weight":25,
+    "type":"item"
+  },
+  {
+    "name":"Mithral Heavy Shield",
+    "value":1020,
+    "weight":30,
+    "type":"item"
+  },
+  {
+    "name":"armor",
+    "modifier":["masterwork","special_materials"],
+    "value":150,
+    "weight":50,
+    "type":"table"
+  }
+]
