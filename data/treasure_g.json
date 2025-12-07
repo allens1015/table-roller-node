@@ -1,0 +1,129 @@
+[
+    {
+        "items": [
+            {
+                "name":"silver",
+                "value":"2d4",
+                "display_value":"2d4*10",
+                "type":"item"
+            },
+            {
+                "name":"gold",
+                "value":"2d4",
+                "type":"item"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            }
+        ],
+        "max_value": 50
+    },
+    {
+        "items": [
+            {
+                "name":"gold",
+                "value":"2d4",
+                "type":"item"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 75
+    },
+    {
+        "items": [
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_scrolls",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 100
+    },
+    {
+        "items": [
+            {
+                "name":"lesser_minor_scrolls",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 150
+    },
+    {
+        "items": [
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 200
+    },
+    {
+        "items": [
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 250
+    },
+    {
+        "items": [
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_scrolls",
+                "type":"table"
+            }
+        ],
+        "max_value": 500
+    }
+]
