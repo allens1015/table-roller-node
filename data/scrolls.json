@@ -1,0 +1,32 @@
+[
+  {
+    "name":"lesser_minor_scrolls",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_minor_scrolls",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"lesser_medium_scrolls",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_medium_scrolls",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"lesser_major_scrolls",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_major_scrolls",
+    "type":"table",
+    "weight":1
+  }
+]

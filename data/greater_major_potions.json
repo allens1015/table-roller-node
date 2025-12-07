@@ -1,0 +1,12 @@
+[
+  {
+    "name":"2_level_potions_rarity",
+    "weight":10,
+    "type":"table"
+  },
+  {
+    "name":"3_level_potions_rarity",
+    "weight":90,
+    "type":"table"
+  }
+]

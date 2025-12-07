@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Headband of mental resilience",
+    "type":"item",
+    "weight":20,
+    "value":64000
+  },
+  {
+    "name":"Headband of mental superiority +4",
+    "type":"item",
+    "weight":30,
+    "value":64000
+  },
+  {
+    "name":"Headband of aerial agility +6",
+    "type":"item",
+    "weight":15,
+    "value":81000
+  },
+  {
+    "name":"Headband of mental prowess +6",
+    "type":"item",
+    "weight":20,
+    "value":90000
+  },
+  {
+    "name":"Headband of mental superiority +6",
+    "type":"item",
+    "weight":15,
+    "value":144000
+  }
+]

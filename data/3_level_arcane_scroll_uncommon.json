@@ -1,0 +1,172 @@
+[
+  {
+    "name":"Animate dead, lesser",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Aqueous orb",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Arcane sight",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Beast shape",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Clairaudience/clairvoyance",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Cloak of winds",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Daylight",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Deep slumber",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Distracting cacophony",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Draconic reservoir",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Elemental aura",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Explosive runes",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Force punch",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Gentle repose",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Halt undead",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Healing thief",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Hydraulic torrent",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Keen edge",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Magic weapon, greater",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Monstrous physique I",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Rage",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Ray of exhaustion",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Resinous skin",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Resist energy, communal",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Secret page",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shrink item",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Sleet storm",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Spiked pit",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Undead anatomy I",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Versatile weapon",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Wind wall",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Illusory script",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Nondetection",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Sepia snake sigil",
+    "type":"item",
+    "weight":1
+  }
+]

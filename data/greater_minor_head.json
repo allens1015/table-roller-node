@@ -1,0 +1,50 @@
+[
+  {
+    "name":"Circlet of persuasion",
+    "type":"item",
+    "weight":12,
+    "value":4500
+  },
+  {
+    "name":"Grappler’s mask",
+    "type":"item",
+    "weight":9,
+    "value":5000
+  },
+  {
+    "name":"Helm of fearsome mien",
+    "type":"item",
+    "weight":10,
+    "value":5000
+  },
+  {
+    "name":"Jingasa of the fortunate soldier",
+    "type":"item",
+    "weight":9,
+    "value":5000
+  },
+  {
+    "name":"Helm of comprehend languages and read magic",
+    "type":"item",
+    "weight":14,
+    "value":5200
+  },
+  {
+    "name":"Crown of swords",
+    "type":"item",
+    "weight":13,
+    "value":6000
+  },
+  {
+    "name":"Crown of blasting, minor",
+    "type":"item",
+    "weight":20,
+    "value":6480
+  },
+  {
+    "name":"Mask of the krenshar",
+    "type":"item",
+    "weight":13,
+    "value":7200
+  }
+]

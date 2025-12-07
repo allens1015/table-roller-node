@@ -1,0 +1,162 @@
+[
+  {
+    "name":"Aid",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Align weapon",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Animal messenger",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Barkskin",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Bear’s endurance",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Bull’s strength",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Cat’s grace",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Chill metal",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Cure moderate wounds",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Darkness",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Delay poison",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Eagle’s splendor",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Find traps",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Flame blade",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Fog cloud",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Heat metal",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Hold animal",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Hold person",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Inflict moderate wounds",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Owl’s wisdom",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove paralysis",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Resist energy",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Restoration, lesser",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Shield other",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Silence",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Sound burst",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Spiritual weapon",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Summon monster II",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Summon nature’s ally II",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Summon swarm",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Zone of truth",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Augury",
+    "type":"item",
+    "weight":3
+  }
+]

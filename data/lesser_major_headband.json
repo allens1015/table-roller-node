@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Soulbound eye",
+    "type":"item",
+    "weight":9,
+    "value":30000
+  },
+  {
+    "name":"Winter wolf headband",
+    "type":"item",
+    "weight":10,
+    "value":32000
+  },
+  {
+    "name":"Headband of alluring charisma +6",
+    "type":"item",
+    "weight":13,
+    "value":36000
+  },
+  {
+    "name":"Headband of inspired wisdom +6",
+    "type":"item",
+    "weight":13,
+    "value":36000
+  },
+  {
+    "name":"Headband of vast intelligence +6",
+    "type":"item",
+    "weight":13,
+    "value":36000
+  },
+  {
+    "name":"Shifter's headband +6",
+    "type":"item",
+    "weight":8,
+    "value":39000
+  },
+  {
+    "name":"Headband of mental prowess +4",
+    "type":"item",
+    "weight":15,
+    "value":40000
+  },
+  {
+    "name":"Headband of seduction",
+    "type":"item",
+    "weight":9,
+    "value":40000
+  },
+  {
+    "name":"Headband of aerial agility +4",
+    "type":"item",
+    "weight":10,
+    "value":42000
+  }
+]

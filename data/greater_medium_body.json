@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Xorn robe",
+    "type":"item",
+    "weight":25,
+    "value":20000
+  },
+  {
+    "name":"Corset of dire witchcraft",
+    "type":"item",
+    "weight":27,
+    "value":22000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +3",
+    "type":"item",
+    "weight":24,
+    "value":27000
+  },
+  {
+    "name":"Robe of scintillating colors",
+    "type":"item",
+    "weight":24,
+    "value":27000
+  }
+]

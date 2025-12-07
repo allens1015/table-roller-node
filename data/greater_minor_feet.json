@@ -1,0 +1,68 @@
+[
+  {
+    "name":"Burglar boots, minor",
+    "type":"item",
+    "weight":7,
+    "value":4000
+  },
+  {
+    "name":"Horseshoes of crushing blows +1",
+    "type":"item",
+    "weight":6,
+    "value":4000
+  },
+  {
+    "name":"Sandals of quick reaction",
+    "type":"item",
+    "weight":6,
+    "value":4000
+  },
+  {
+    "name":"Slippers of cloudwalking",
+    "type":"item",
+    "weight":7,
+    "value":4400
+  },
+  {
+    "name":"Slippers of spider climbing",
+    "type":"item",
+    "weight":14,
+    "value":4800
+  },
+  {
+    "name":"Sandals of the lightest step",
+    "type":"item",
+    "weight":6,
+    "value":5000
+  },
+  {
+    "name":"Boots of striding and springing",
+    "type":"item",
+    "weight":14,
+    "value":5500
+  },
+  {
+    "name":"Horseshoes of a zephyr",
+    "type":"item",
+    "weight":8,
+    "value":6000
+  },
+  {
+    "name":"Haunted shoes",
+    "type":"item",
+    "weight":7,
+    "value":6480
+  },
+  {
+    "name":"Jaunt boots",
+    "type":"item",
+    "weight":7,
+    "value":7200
+  },
+  {
+    "name":"Boots of levitation",
+    "type":"item",
+    "weight":18,
+    "value":7500
+  }
+]

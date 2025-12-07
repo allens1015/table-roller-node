@@ -1,0 +1,17 @@
+[
+  {
+    "name":"2_level_scrolls_rarity",
+    "weight":10,
+    "type":"table"
+  },
+  {
+    "name":"3_level_scrolls_rarity",
+    "weight":45,
+    "type":"table"
+  },
+  {
+    "name":"4_level_scrolls_rarity",
+    "weight":45,
+    "type":"table"
+  }
+]

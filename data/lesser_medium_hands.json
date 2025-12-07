@@ -1,0 +1,68 @@
+[
+  {
+    "name":"Deliquescent gloves",
+    "type":"item",
+    "weight":2,
+    "value":8000
+  },
+  {
+    "name":"Form-fixing gauntlets",
+    "type":"item",
+    "weight":3,
+    "value":8000
+  },
+  {
+    "name":"Iron cobra gauntlet",
+    "type":"item",
+    "weight":3,
+    "value":8000
+  },
+  {
+    "name":"Shadow falconer’s glove",
+    "type":"item",
+    "weight":8,
+    "value":8000
+  },
+  {
+    "name":"Spellstrike gloves",
+    "type":"item",
+    "weight":4,
+    "value":8000
+  },
+  {
+    "name":"Glyphbane gloves",
+    "type":"item",
+    "weight":8,
+    "value":9000
+  },
+  {
+    "name":"Glove of storing",
+    "type":"item",
+    "weight":12,
+    "value":10000
+  },
+  {
+    "name":"Gloves of shaping",
+    "type":"item",
+    "weight":6,
+    "value":10000
+  },
+  {
+    "name":"Pliant gloves",
+    "type":"item",
+    "weight":8,
+    "value":10000
+  },
+  {
+    "name":"Gauntlet of rust",
+    "type":"item",
+    "weight":22,
+    "value":11500
+  },
+  {
+    "name":"Gloves of dueling",
+    "type":"item",
+    "weight":24,
+    "value":15000
+  }
+]

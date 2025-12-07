@@ -1,0 +1,62 @@
+[
+  {
+    "name":"Arcane mark",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Bleed",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Dancing lights",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Detect poison",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Disrupt undead",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Ghost sound",
+    "type":"item",
+    "weight":9
+  },
+  {
+    "name":"Message",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Open/close",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Resistance",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Sift",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Spark",
+    "type":"item",
+    "weight":9
+  },
+  {
+    "name":"Unwitting ally",
+    "type":"item",
+    "weight":8
+  }
+]

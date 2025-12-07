@@ -1,0 +1,86 @@
+[
+  {
+    "name":"Headband of havoc",
+    "type":"item",
+    "weight":6,
+    "value":8000
+  },
+  {
+    "name":"Serpent's band",
+    "type":"item",
+    "weight":6,
+    "value":9000
+  },
+  {
+    "name":"Headband of mental prowess +2",
+    "type":"item",
+    "weight":8,
+    "value":10000
+  },
+  {
+    "name":"Hunter's band",
+    "type":"item",
+    "weight":6,
+    "value":11000
+  },
+  {
+    "name":"Phylactery of negative channeling",
+    "type":"item",
+    "weight":8,
+    "value":11000
+  },
+  {
+    "name":"Phylactery of positive channeling",
+    "type":"item",
+    "weight":8,
+    "value":11000
+  },
+  {
+    "name":"Veiled eye",
+    "type":"item",
+    "weight":6,
+    "value":12000
+  },
+  {
+    "name":"Band of the stalwart warrior",
+    "type":"item",
+    "weight":6,
+    "value":14000
+  },
+  {
+    "name":"Headband of ninjitsu",
+    "type":"item",
+    "weight":6,
+    "value":15000
+  },
+  {
+    "name":"Headband of alluring charisma +4",
+    "type":"item",
+    "weight":8,
+    "value":16000
+  },
+  {
+    "name":"Headband of inspired wisdom +4",
+    "type":"item",
+    "weight":8,
+    "value":16000
+  },
+  {
+    "name":"Headband of mental superiority +2",
+    "type":"item",
+    "weight":9,
+    "value":16000
+  },
+  {
+    "name":"Headband of vast intelligence +4",
+    "type":"item",
+    "weight":8,
+    "value":16000
+  },
+  {
+    "name":"Shifter's headband +4",
+    "type":"item",
+    "weight":7,
+    "value":17500
+  }
+]

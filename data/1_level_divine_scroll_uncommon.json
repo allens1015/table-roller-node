@@ -1,0 +1,177 @@
+[
+  {
+    "name":"Ant haul",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Aspect of the falcon",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Calm animals",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Charm animal",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Compel hostility",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Deathwatch",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Detect animals or plants",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Detect snares and pits",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Diagnose disease",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Endure elements",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Entropic shield",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Faerie fire",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Feather step",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Forbid action",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Frostbite",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Goodberry",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Hide from animals",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Hide from undead",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Hydraulic push",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Jump",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Keen senses",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Liberating command",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Longstrider",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Magic stone",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Pass without trace",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Remove sickness",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Sanctify corpse",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Shillelagh",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Speak with animals",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Stone fist",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Stone shield",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Sun metal",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Touch of the sea",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Bless water",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Curse water",
+    "type":"item",
+    "weight":2
+  }
+]

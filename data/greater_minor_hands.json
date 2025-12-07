@@ -1,0 +1,50 @@
+[
+  {
+    "name":"Gauntlets of the skilled maneuver",
+    "type":"item",
+    "weight":12,
+    "value":4000
+  },
+  {
+    "name":"Ghostvision gloves",
+    "type":"item",
+    "weight":9,
+    "value":4000
+  },
+  {
+    "name":"Gloves of arrow snaring",
+    "type":"item",
+    "weight":12,
+    "value":4000
+  },
+  {
+    "name":"Trapspringer’s gloves",
+    "type":"item",
+    "weight":10,
+    "value":4000
+  },
+  {
+    "name":"Gloves of arcane striking",
+    "type":"item",
+    "weight":12,
+    "value":5000
+  },
+  {
+    "name":"Poisoner’s gloves",
+    "type":"item",
+    "weight":10,
+    "value":5000
+  },
+  {
+    "name":"Magnetist’s gloves",
+    "type":"item",
+    "weight":10,
+    "value":6000
+  },
+  {
+    "name":"Gloves of swimming and climbing",
+    "type":"item",
+    "weight":25,
+    "value":6250
+  }
+]

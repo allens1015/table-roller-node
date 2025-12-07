@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Deathwatch eyes",
+    "type":"item",
+    "weight":18,
+    "value":2000
+  },
+  {
+    "name":"Eyes of the eagle",
+    "type":"item",
+    "weight":20,
+    "value":2500
+  },
+  {
+    "name":"Goggles of minute seeing",
+    "type":"item",
+    "weight":20,
+    "value":2500
+  },
+  {
+    "name":"Pirate’s eye patch",
+    "type":"item",
+    "weight":14,
+    "value":2600
+  },
+  {
+    "name":"Spectacles of understanding",
+    "type":"item",
+    "weight":15,
+    "value":3000
+  },
+  {
+    "name":"Lenses of detection",
+    "type":"item",
+    "weight":13,
+    "value":3500
+  }
+]

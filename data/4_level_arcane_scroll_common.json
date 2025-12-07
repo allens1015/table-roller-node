@@ -1,0 +1,142 @@
+[
+  {
+    "name":"Beast shape II",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Bestow curse",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Black tentacles",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Charm monster",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Confusion",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Crushing despair",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Dimension door",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Dimensional anchor",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Elemental body I",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Enervation",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Enlarge person, mass",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Fear",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Fire shield",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Globe of invulnerability, lesser",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Ice storm",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Invisibility, greater",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Phantasmal killer",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Resilient sphere",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Scrying",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Shadow conjuration",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shout",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Solid fog",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Stone shape",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Summon monster IV",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Wall of fire",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Wall of ice",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Stoneskin",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Animate dead",
+    "type":"item",
+    "weight":3
+  }
+]

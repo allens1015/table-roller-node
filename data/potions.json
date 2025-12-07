@@ -1,0 +1,32 @@
+[
+  {
+    "name":"lesser_minor_potions",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_minor_potions",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"lesser_medium_potions",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_medium_potions",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"lesser_major_potions",
+    "type":"table",
+    "weight":1
+  },
+  {
+    "name":"greater_major_potions",
+    "type":"table",
+    "weight":1
+  }
+]

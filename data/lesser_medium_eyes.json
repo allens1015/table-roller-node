@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Goggles of elvenkind",
+    "type":"item",
+    "weight":16,
+    "value":8500
+  },
+  {
+    "name":"Goggles of brilliant light",
+    "type":"item",
+    "weight":15,
+    "value":8800
+  },
+  {
+    "name":"Blind man’s fold",
+    "type":"item",
+    "weight":17,
+    "value":12000
+  },
+  {
+    "name":"Goggles of night",
+    "type":"item",
+    "weight":19,
+    "value":12000
+  },
+  {
+    "name":"Lenses of figment piercing",
+    "type":"item",
+    "weight":15,
+    "value":12000
+  },
+  {
+    "name":"Arachnid goggles",
+    "type":"item",
+    "weight":18,
+    "value":15000
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name":"+1",
+    "type":"add",
+    "weight":26,
+    "continue_name":"random_weapons"
+  },
+  {
+    "name":"+2",
+    "type":"add",
+    "weight":26,
+    "continue_name":"random_weapons"
+  },
+  {
+    "name":"+1",
+    "type":"add",
+    "weight":26,
+    "continue_name":"1_weapon_special_abilities"
+  },
+  {
+    "name":"greater_minor_specific_weapon",
+    "type":"table",
+    "weight":20,
+    "continue_name":"greater_minor_specific_weapon"
+  }
+]

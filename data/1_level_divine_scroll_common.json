@@ -1,0 +1,137 @@
+[
+  {
+    "name":"Bane",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Bless",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Cause fear",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Command",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Comprehend languages",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Cure light wounds",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Detect chaos",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Detect evil",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Detect good",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Detect law",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Detect undead",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Divine favor",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Doom",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Entangle",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Inflict light wounds",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Magic fang",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Obscuring mist",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Produce flame",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from chaos",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from evil",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from good",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from law",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove fear",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Sanctuary",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Shield of faith",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Summon monster I",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Summon nature's ally I",
+    "type":"item",
+    "weight":3
+  }
+]

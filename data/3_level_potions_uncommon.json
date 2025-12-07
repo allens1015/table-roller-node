@@ -1,0 +1,47 @@
+[
+  {
+    "name":"Burrow",
+    "type":"item",
+    "weight":12
+  },
+  {
+    "name":"Countless eyes",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Daylight",
+    "type":"item",
+    "weight":12
+  },
+  {
+    "name":"Draconic reservoir",
+    "type":"item",
+    "weight":15
+  },
+  {
+    "name":"Flame arrow",
+    "type":"item",
+    "weight":9
+  },
+  {
+    "name":"Shrink item",
+    "type":"item",
+    "weight":9
+  },
+  {
+    "name":"Stone shape",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Fire trap",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Nondetection",
+    "type":"item",
+    "weight":13
+  }
+]

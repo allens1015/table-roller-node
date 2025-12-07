@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Eyes of the owl",
+    "type":"item",
+    "weight":20,
+    "value":4000
+  },
+  {
+    "name":"Eyes of keen sight",
+    "type":"item",
+    "weight":24,
+    "value":6000
+  },
+  {
+    "name":"Treasure hunter’s goggles",
+    "type":"item",
+    "weight":22,
+    "value":6400
+  },
+  {
+    "name":"Inquisitor’s monocle",
+    "type":"item",
+    "weight":18,
+    "value":6800
+  },
+  {
+    "name":"Kinsight goggles",
+    "type":"item",
+    "weight":16,
+    "value":7500
+  }
+]

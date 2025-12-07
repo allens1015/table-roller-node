@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Mantle of immortality",
+    "type":"item",
+    "weight":60,
+    "value":50000
+  },
+  {
+    "name":"Poisoner’s jacket, greater",
+    "type":"item",
+    "weight":50,
+    "value":58000
+  }
+]

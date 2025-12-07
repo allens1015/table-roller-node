@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Eyes of eyebite",
+    "type":"item",
+    "weight":60,
+    "value":30000
+  },
+  {
+    "name":"Sniper goggles, greater",
+    "type":"item",
+    "weight":40,
+    "value":50000
+  }
+]

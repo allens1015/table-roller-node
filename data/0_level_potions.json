@@ -1,0 +1,37 @@
+[
+  {
+    "name":"Arcane Mark",
+    "type":"item",
+    "weight":14
+  },
+  {
+    "name":"Guidance",
+    "type":"item",
+    "weight":14
+  },
+  {
+    "name":"Light",
+    "type":"item",
+    "weight":16
+  },
+  {
+    "name":"Purify Food and Drink",
+    "type":"item",
+    "weight":12
+  },
+  {
+    "name":"Resistance",
+    "type":"item",
+    "weight":14
+  },
+  {
+    "name":"Stabilize",
+    "type":"item",
+    "weight":14
+  },
+  {
+    "name":"Virtue",
+    "type":"item",
+    "weight":14
+  }
+]

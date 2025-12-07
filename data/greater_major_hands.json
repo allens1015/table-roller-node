@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Talons of Leng",
+    "type":"item",
+    "weight":60,
+    "value":67000
+  },
+  {
+    "name":"Gauntlets of the weaponmaster",
+    "type":"item",
+    "weight":40,
+    "value":110000
+  }
+]

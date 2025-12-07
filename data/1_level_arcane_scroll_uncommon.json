@@ -1,0 +1,167 @@
+[
+  {
+    "name":"Air bubble",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Alarm",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Animate rope",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Ant haul",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Blend",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Break",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Color spray",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Comprehend languages",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Corrosive touch",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Detect secret doors",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Detect undead",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Erase",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Flare burst",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Floating disk",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Hold portal",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Hydraulic push",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Icicle dagger",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Illusion of calm",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Jump",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Magic aura",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Mirror strike",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Mount",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Ray of sickening",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Reduce person",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Shadow weapon",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shock shield",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Stone fist",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Touch of the sea",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Unseen servant",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Urban grace",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Vanish",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Ventriloquism",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Voice alteration",
+    "type":"item",
+    "weight":1
+  }
+]

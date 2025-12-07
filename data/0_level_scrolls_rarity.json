@@ -1,0 +1,22 @@
+[
+  {
+    "name":"0_level_arcane_scroll_common",
+    "type":"table",
+    "weight":45
+  },
+  {
+    "name":"0_level_arcane_scroll_uncommon",
+    "type":"table",
+    "weight":15
+  },
+  {
+    "name":"0_level_divine_scroll_common",
+    "type":"table",
+    "weight":30
+  },
+  {
+    "name":"0_level_divine_scroll_common",
+    "type":"table",
+    "weight":10
+  }
+]

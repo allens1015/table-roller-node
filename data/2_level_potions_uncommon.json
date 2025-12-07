@@ -1,0 +1,87 @@
+[
+  {
+    "name":"Ablative barrier",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Acute senses",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Arcane lock",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Bullet shield",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Certain grip",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Continual flame",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Corruption resistance",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Disguise other",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Gentle repose",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Make whole",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Obscure object",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Reduce animal",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Rope trick",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Slipstream",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Status",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Warp wood",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Wood shape",
+    "type":"item",
+    "weight":5
+  }
+]

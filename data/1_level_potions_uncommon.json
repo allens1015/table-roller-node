@@ -1,0 +1,92 @@
+[
+  {
+    "name":"Animate rope",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Ant haul",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Cloak of the shade",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Erase",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Feather step",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Goodberry",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Grease",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Hide from animals",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Hide from undead",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Hold portal",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Invigorate",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Keen senses",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Magic stone",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Remove sickness",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Sanctify corpse",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Shillelagh",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Touch of the sea",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Vanish",
+    "type":"item",
+    "weight":8
+  }
+]

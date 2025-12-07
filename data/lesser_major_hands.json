@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Gloves of the commanding conjurer",
+    "type":"item",
+    "weight":40,
+    "value":30000
+  },
+  {
+    "name":"Gauntlet of rust, greater",
+    "type":"item",
+    "weight":60,
+    "value":34500
+  }
+]

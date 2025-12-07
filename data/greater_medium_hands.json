@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Vampiric gloves",
+    "type":"item",
+    "weight":30,
+    "value":18000
+  },
+  {
+    "name":"Giant fist gauntlets",
+    "type":"item",
+    "weight":35,
+    "value":20000
+  },
+  {
+    "name":"Gloves of the shortened path",
+    "type":"item",
+    "weight":35,
+    "value":27000
+  }
+]

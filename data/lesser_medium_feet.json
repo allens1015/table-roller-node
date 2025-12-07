@@ -1,0 +1,74 @@
+[
+  {
+    "name":"Boots of escape",
+    "type":"item",
+    "weight":8,
+    "value":8000
+  },
+  {
+    "name":"Earth root boots",
+    "type":"item",
+    "weight":6,
+    "value":8000
+  },
+  {
+    "name":"Nightmare boots",
+    "type":"item",
+    "weight":7,
+    "value":8500
+  },
+  {
+    "name":"Nightmare horseshoes",
+    "type":"item",
+    "weight":5,
+    "value":9000
+  },
+  {
+    "name":"Caltrop boots",
+    "type":"item",
+    "weight":6,
+    "value":10000
+  },
+  {
+    "name":"Tremor boots",
+    "type":"item",
+    "weight":7,
+    "value":10000
+  },
+  {
+    "name":"Boots of the mastodon",
+    "type":"item",
+    "weight":8,
+    "value":10500
+  },
+  {
+    "name":"Shoes of the lightning leaper",
+    "type":"item",
+    "weight":7,
+    "value":10500
+  },
+  {
+    "name":"Boots of speed",
+    "type":"item",
+    "weight":16,
+    "value":12000
+  },
+  {
+    "name":"Verdant boots",
+    "type":"item",
+    "weight":7,
+    "value":12000
+  },
+  {
+    "name":"Horseshoes of crushing blows +2",
+    "type":"item",
+    "weight":7,
+    "value":16000
+  },
+  {
+    "name":"Winged boots",
+    "type":"item",
+    "weight":16,
+    "value":16000
+  }
+]

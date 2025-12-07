@@ -1,0 +1,157 @@
+[
+  {
+    "name":"Acid pit",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Arcane eye",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Ball lightning",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Contagion",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Darkvision, greater",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Detect scrying",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Dragon’s breath",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"False life, greater",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Firefall",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Geas, lesser",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Ghost wolf",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Hallucinatory terrain",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Illusory wall",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Locate creature",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Minor creation",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Monstrous physique II",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Obsidian flow",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Phantom chariot",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Rainbow pattern",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Reduce person, mass",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Remove curse",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Secure shelter",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shadow projection",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shocking image",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Telekinetic charge",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"True form",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Vermin shape I",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Volcanic storm",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Wandering star motes",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Fire trap",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Mnemonic enhancer",
+    "type":"item",
+    "weight":1
+  }
+]

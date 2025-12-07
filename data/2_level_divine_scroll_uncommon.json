@@ -1,0 +1,187 @@
+[
+  {
+    "name":"Animal aspect",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Animal trance",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Animate dead, lesser",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Arrow of law",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Aspect of the bear",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Blessing of courage and life",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Calm emotions",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Death knell",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Dread bolt",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Effortless armor",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Enthrall",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Flaming sphere",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Gentle repose",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Grace",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Groundswell",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Gust of wind",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Instant armor",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Instrument of agony",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Make whole",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Reduce animal",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Scent trail",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Shard of chaos",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Share language",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shatter",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Soften earth and stone",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Spear of purity",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Spider climb",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Status",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Tree shape",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Undetectable alignment",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Warp wood",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Weapon of awe",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Wood shape",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Consecrate",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Desecrate",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Fire trap",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Masterwork transformation",
+    "type":"item",
+    "weight":1
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Getaway boots",
+    "type":"item",
+    "weight":20,
+    "value":30000
+  },
+  {
+    "name":"Horseshoes of crushing blows +3",
+    "type":"item",
+    "weight":15,
+    "value":36000
+  },
+  {
+    "name":"Horseshoes of glory",
+    "type":"item",
+    "weight":20,
+    "value":39600
+  },
+  {
+    "name":"Burglar boots, major",
+    "type":"item",
+    "weight":20,
+    "value":46000
+  },
+  {
+    "name":"Boots of teleportation",
+    "type":"item",
+    "weight":25,
+    "value":49000
+  }
+]

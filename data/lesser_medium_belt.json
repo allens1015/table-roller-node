@@ -1,0 +1,98 @@
+[
+  {
+    "name":"Serpent belt",
+    "type":"item",
+    "weight":4,
+    "value":9000
+  },
+  {
+    "name":"Monkey belt",
+    "type":"item",
+    "weight":4,
+    "value":9400
+  },
+  {
+    "name":"Belt of physical might +2",
+    "type":"item",
+    "weight":8,
+    "value":10000
+  },
+  {
+    "name":"Belt of the weasel",
+    "type":"item",
+    "weight":6,
+    "value":10000
+  },
+  {
+    "name":"Belt of thunderous charging",
+    "type":"item",
+    "weight":5,
+    "value":10000
+  },
+  {
+    "name":"Minotaur belt",
+    "type":"item",
+    "weight":5,
+    "value":11000
+  },
+  {
+    "name":"Plague rat belt, greater",
+    "type":"item",
+    "weight":4,
+    "value":11200
+  },
+  {
+    "name":"Belt of equilibrium",
+    "type":"item",
+    "weight":5,
+    "value":12000
+  },
+  {
+    "name":"Security belt",
+    "type":"item",
+    "weight":5,
+    "value":12500
+  },
+  {
+    "name":"Belt of mighty hurling, lesser",
+    "type":"item",
+    "weight":5,
+    "value":14000
+  },
+  {
+    "name":"Belt of dwarvenkind",
+    "type":"item",
+    "weight":6,
+    "value":14900
+  },
+  {
+    "name":"Cord of stubborn resolve",
+    "type":"item",
+    "weight":3,
+    "value":15000
+  },
+  {
+    "name":"Belt of giant strength +4",
+    "type":"item",
+    "weight":10,
+    "value":16000
+  },
+  {
+    "name":"Belt of physical perfection +2",
+    "type":"item",
+    "weight":9,
+    "value":16000
+  },
+  {
+    "name":"Belt of incredible dexterity +4",
+    "type":"item",
+    "weight":10,
+    "value":16000
+  },
+  {
+    "name":"Belt of mighty constitution +4",
+    "type":"item",
+    "weight":10,
+    "value":16000
+  }
+]

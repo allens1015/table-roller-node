@@ -1,0 +1,147 @@
+[
+  {
+    "name":"Aqueous orb",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Archon’s aura",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Bestow insight",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Blindness/deafness",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Burst of nettles",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Chain of perdition",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Contagion",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Create food and water",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Daybreak arrow",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Diminish plants",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Discovery torch",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Dominate animal",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Guiding star",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Helping hand",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Meld into stone",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Obscure object",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Plant growth",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Quench",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Shifting sands",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Snare",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Speak with plants",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Spike growth",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Vision of hell",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Wind wall",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Wrathful mantle",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Continual flame",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Nap stack",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Glyph of warding",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Symbol of healing",
+    "type":"item",
+    "weight":2
+  }
+]

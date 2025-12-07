@@ -1,0 +1,142 @@
+[
+  {
+    "name":"Beast shape I",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Blink",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Dispel magic",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Displacement",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Fireball",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Flame arrow",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Fly",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Gaseous form",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Haste",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Heroism",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Hold person",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Invisibility sphere",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Lightning bolt",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Magic circle against chaos",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Magic circle against evil",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Magic circle against good",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Magic circle against law",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Major image",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Phantom steed",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Protection from energy",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Slow",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Stinking cloud",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Suggestion",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Summon monster III",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Tiny hut",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Tongues",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Vampiric touch",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Water breathing",
+    "type":"item",
+    "weight":3
+  }
+]

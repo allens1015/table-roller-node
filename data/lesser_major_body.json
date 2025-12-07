@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Gunman’s duster",
+    "type":"item",
+    "weight":40,
+    "value":36000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +4",
+    "type":"item",
+    "weight":40,
+    "value":48000
+  },
+  {
+    "name":"Smuggler’s collapsible robe",
+    "type":"item",
+    "weight":20,
+    "value":48000
+  }
+]

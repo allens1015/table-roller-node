@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Phylactery of faithfulness",
+    "type":"item",
+    "weight":60,
+    "value":1000
+  },
+  {
+    "name":"Dead man’s headband",
+    "type":"item",
+    "weight":40,
+    "value":3600
+  }
+]

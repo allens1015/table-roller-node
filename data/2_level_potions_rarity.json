@@ -1,0 +1,12 @@
+[
+  {
+    "name":"2_level_potions_common",
+    "type":"table",
+    "weight":75
+  },
+  {
+    "name":"2_level_potions_uncommon",
+    "type":"table",
+    "weight":25
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "name":"+1",
+    "type":"add",
+    "continue_name":"random_weapons",
+    "weight":80
+  },
+  {
+    "name":"lesser_minor_specific_magic_weapon",
+    "type":"table",
+    "weight":20
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "name":"Bestow weapon proficiency",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Blindness/deafness",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Burning gaze",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Certain grip",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Command undead",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Create pit",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Daze monster",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Detect thoughts",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Disguise other",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Elemental touch",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Fire breath",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Fog cloud",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Ghoul touch",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Glide",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Gust of wind",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Haunting mists",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Hideous laughter",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Hypnotic pattern",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Locate object",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Make whole",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Misdirection",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Obscure object",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Pernicious poison",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Protection from arrows",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Pyrotechnics",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Returning weapon",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Scare",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Shadow anchor",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Share memory",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Slipstream",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Spectral hand",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Spontaneous immolation",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Touch of idiocy",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Unshakable chill",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Magic mouth",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Arcane lock",
+    "type":"item",
+    "weight":1
+  },
+  {
+    "name":"Continual flame",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Phantom trap",
+    "type":"item",
+    "weight":1
+  }
+]

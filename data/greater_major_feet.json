@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Slippers of the triton",
+    "type":"item",
+    "weight":40,
+    "value":56000
+  },
+  {
+    "name":"Horseshoes of crushing blows +4",
+    "type":"item",
+    "weight":30,
+    "value":64000
+  },
+  {
+    "name":"Horseshoes of crushing blows +5",
+    "type":"item",
+    "weight":30,
+    "value":100000
+  }
+]

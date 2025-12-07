@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Belt of giant strength +2",
+    "type":"item",
+    "weight":18,
+    "value":4000
+  },
+  {
+    "name":"Belt of incredible dexterity +2",
+    "type":"item",
+    "weight":18,
+    "value":4000
+  },
+  {
+    "name":"Belt of mighty constitution +2",
+    "type":"item",
+    "weight":18,
+    "value":4000
+  },
+  {
+    "name":"Belt of teeth",
+    "type":"item",
+    "weight":8,
+    "value":4000
+  },
+  {
+    "name":"Blinkback belt",
+    "type":"item",
+    "weight":12,
+    "value":5000
+  },
+  {
+    "name":"Plague rat belt",
+    "type":"item",
+    "weight":10,
+    "value":5200
+  },
+  {
+    "name":"Belt of foraging",
+    "type":"item",
+    "weight":16,
+    "value":6000
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "name":"Bestow curse",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Call lightning",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Cure serious wounds",
+    "type":"item",
+    "weight":7
+  },
+  {
+    "name":"Daylight",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Deeper darkness",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Dispel magic",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Inflict serious wounds",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Invisibility purge",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Locate object",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Magic circle against chaos",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Magic circle against evil",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Magic circle against good",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Magic circle against law",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Magic fang, greater",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Magic vestment",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Poison",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Prayer",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Protection from energy",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove blindness/deafness",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Remove curse",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove disease",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Searing light",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Sleet storm",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Speak with dead",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Stone shape",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Summon monster III",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Summon nature’s ally III",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Water breathing",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Water walk",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Animate dead",
+    "type":"item",
+    "weight":3
+  }
+]

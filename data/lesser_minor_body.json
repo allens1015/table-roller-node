@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Robe of infinite twine",
+    "type":"item",
+    "weight":20,
+    "value":1000
+  },
+  {
+    "name":"Robe of needles",
+    "type":"item",
+    "weight":15,
+    "value":1000
+  },
+  {
+    "name":"Robe of bones",
+    "type":"item",
+    "weight":25,
+    "value":2400
+  },
+  {
+    "name":"Bodywrap of mighty strikes +1",
+    "type":"item",
+    "weight":10,
+    "value":3000
+  },
+  {
+    "name":"Corset of the vishkanya",
+    "type":"item",
+    "weight":10,
+    "value":3000
+  },
+  {
+    "name":"Druid’s vestment",
+    "type":"item",
+    "weight":20,
+    "value":3750
+  }
+]

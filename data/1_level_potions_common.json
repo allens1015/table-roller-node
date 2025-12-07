@@ -1,0 +1,87 @@
+[
+  {
+    "name":"Bless Weapon",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Cure light wounds",
+    "type":"item",
+    "weight":10
+  },
+  {
+    "name":"Endure elements",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Enlarge person",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Jump",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Mage armor",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Magic fang",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Magic weapon",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Pass without trace",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Protection from chaos",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Protection from evil",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Protection from good",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Protection from law",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Reduce person",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Remove fear",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Sanctuary",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Shield of faith",
+    "type":"item",
+    "weight":8
+  }
+]

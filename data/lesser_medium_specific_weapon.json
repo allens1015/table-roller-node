@@ -1,0 +1,110 @@
+[
+  {
+    "name":"Bloodletting kukri",
+    "type":"item",
+    "weight":3,
+    "value":6308
+  },
+  {
+    "name":"Boulderhead mace",
+    "type":"item",
+    "weight":6,
+    "value":6812
+  },
+  {
+    "name":"Beaststrike club",
+    "type":"item",
+    "weight":5,
+    "value":7300
+  },
+  {
+    "name":"Fighter's fork",
+    "type":"item",
+    "weight":6,
+    "value":7315
+  },
+  {
+    "name":"Everflowing aspergillum",
+    "type":"item",
+    "weight":3,
+    "value":7805
+  },
+  {
+    "name":"Hurricane querterstaff",
+    "type":"item",
+    "weight":5,
+    "value":7840
+  },
+  {
+    "name":"Dagger of venom",
+    "type":"item",
+    "weight":6,
+    "value":8302
+  },
+  {
+    "name":"Gloom blade",
+    "type":"item",
+    "weight":5,
+    "value":8810
+  },
+  {
+    "name":"Frostbite sling",
+    "type":"item",
+    "weight":5,
+    "value":9380
+  },
+  {
+    "name":"Trident of stability",
+    "type":"item",
+    "weight":5,
+    "value":9815
+  },
+  {
+    "name":"Trident of warning",
+    "type":"item",
+    "weight":5,
+    "value":10115
+  },
+  {
+    "name":"Assasin's dagger",
+    "type":"item",
+    "weight":6,
+    "value":10302
+  },
+  {
+    "name":"Dagger of doubling",
+    "type":"item",
+    "weight":6,
+    "value":10302
+  },
+  {
+    "name":"Earthenflail",
+    "type":"item",
+    "weight":5,
+    "value":11315
+  },
+  {
+    "name":"Swift obsidian greataxe",
+    "type":"item",
+    "weight":8,
+    "value":11320
+  },
+  {
+    "name":"Polarity hammer",
+    "type":"item",
+    "weight":6,
+    "value":12310
+  },
+  {
+    "name":"Blade of binding",
+    "type":"item",
+    "weight":8,
+    "value":12350
+  },
+  {
+    "name":"Shifter's sorrow",
+    "type":"item",
+    "weight":7,
+    "value":12780
+  }
+]

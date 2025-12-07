@@ -1,0 +1,62 @@
+[
+  {
+    "name":"Sash of the war champion",
+    "type":"item",
+    "weight":10,
+    "value":4000
+  },
+  {
+    "name":"Sipping jacket",
+    "type":"item",
+    "weight":10,
+    "value":5000
+  },
+  {
+    "name":"Tunic of careful casting",
+    "type":"item",
+    "weight":11,
+    "value":5000
+  },
+  {
+    "name":"Vest of escape",
+    "type":"item",
+    "weight":11,
+    "value":5200
+  },
+  {
+    "name":"Cackling hag’s blouse",
+    "type":"item",
+    "weight":10,
+    "value":6000
+  },
+  {
+    "name":"Deadshot vest",
+    "type":"item",
+    "weight":10,
+    "value":6000
+  },
+  {
+    "name":"Prophet’s pectoral",
+    "type":"item",
+    "weight":8,
+    "value":6000
+  },
+  {
+    "name":"Tunic of deadly might",
+    "type":"item",
+    "weight":9,
+    "value":6000
+  },
+  {
+    "name":"Vest of the vengeful tracker",
+    "type":"item",
+    "weight":11,
+    "value":6000
+  },
+  {
+    "name":"Resplendent uniform coat",
+    "type":"item",
+    "weight":10,
+    "value":7000
+  }
+]

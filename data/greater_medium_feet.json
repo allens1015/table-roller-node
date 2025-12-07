@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Shoes of the firewalker",
+    "type":"item",
+    "weight":38,
+    "value":21000
+  },
+  {
+    "name":"Dryad sandals",
+    "type":"item",
+    "weight":34,
+    "value":24000
+  },
+  {
+    "name":"Horseshoes of the mist",
+    "type":"item",
+    "weight":28,
+    "value":27000
+  }
+]

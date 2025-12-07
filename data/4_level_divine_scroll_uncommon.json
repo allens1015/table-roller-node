@@ -1,0 +1,127 @@
+[
+  {
+    "name":"Absorb toxicity",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Antiplant shell",
+    "type":"item",
+    "weight":2
+  },
+  {
+    "name":"Aspect of the stag",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Aura of doom",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Ball lightning",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Blessing of fervor",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Blight",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Command plants",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Control water",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Debilitating portent",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Giant vermin",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Ice storm",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Imbue with spell ability",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Plague carrier",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Planar adaptation",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Protection from energy, communal",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Reincarnate",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Repel vermin",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Rusting grasp",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Scrying",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Sending",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Spiritual ally",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Thorn body",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Volcanic storm",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Symbol of slowing",
+    "type":"item",
+    "weight":2
+  }
+]

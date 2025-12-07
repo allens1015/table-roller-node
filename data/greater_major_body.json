@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Robe of stars",
+    "type":"item",
+    "weight":10,
+    "value":58000
+  },
+  {
+    "name":"Robe of gates",
+    "type":"item",
+    "weight":5,
+    "value":64000
+  },
+  {
+    "name":"Otherworldly kimono",
+    "type":"item",
+    "weight":5,
+    "value":67000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +5",
+    "type":"item",
+    "weight":20,
+    "value":75000
+  },
+  {
+    "name":"Resplendent robe of the thespian",
+    "type":"item",
+    "weight":11,
+    "value":75000
+  },
+  {
+    "name":"Robe of the archmagi",
+    "type":"item",
+    "weight":16,
+    "value":75000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +6",
+    "type":"item",
+    "weight":10,
+    "value":108000
+  },
+  {
+    "name":"Robe of eyes",
+    "type":"item",
+    "weight":20,
+    "value":120000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +7",
+    "type":"item",
+    "weight":3,
+    "value":147000
+  }
+]

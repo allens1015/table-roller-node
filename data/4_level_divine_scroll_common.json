@@ -1,0 +1,127 @@
+[
+  {
+    "name":"Air walk",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Chaos hammer",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Cure critical wounds",
+    "type":"item",
+    "weight":8
+  },
+  {
+    "name":"Death ward",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Dimensional anchor",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Discern lies",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Dismissal",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Divine power",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Flame strike",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Freedom of movement",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Holy smite",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Inflict critical wounds",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Magic weapon, greater",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Neutralize poison",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Order’s wrath",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Poison",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Spell immunity",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Spike stones",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Summon monster IV",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Summon nature’s ally IV",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Tongues",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Unholy blight",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Divination",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Planar ally, lesser",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Restoration",
+    "type":"item",
+    "weight":5
+  }
+]

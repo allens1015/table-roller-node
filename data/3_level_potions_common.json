@@ -1,0 +1,122 @@
+[
+  {
+    "name":"Cure serious wounds",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Dispel magic",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Displacement",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Fly",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Gaseous form",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Good hope",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Haste",
+    "type":"item",
+    "weight":6
+  },
+  {
+    "name":"Heroism",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Keen edge",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Magic fang, greater",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Magic vestment",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Neutralize poison",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Protection from energy, acid",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from energy, cold",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from energy, electricity",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from energy, fire",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Protection from energy, sonic",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Rage",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove blindness/deafness",
+    "type":"item",
+    "weight":3
+  },
+  {
+    "name":"Remove curse",
+    "type":"item",
+    "weight":4
+  },
+  {
+    "name":"Remove disease",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Tongues",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Water breathing",
+    "type":"item",
+    "weight":5
+  },
+  {
+    "name":"Water walk",
+    "type":"item",
+    "weight":4
+  }
+]
