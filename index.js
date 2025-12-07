@@ -101,6 +101,7 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
   }
 
   // Process special_materials modifiers now that we know the final item table
+  let materialMultiplier = 1;
   for (const specialMod of pendingSpecialModifiers) {
     if (specialMod === 'special_materials' && finalItemTable) {
       const specialMaterialsPath = path.join(__dirname, 'data', 'special_materials.json');
@@ -108,13 +109,7 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
       // Filter materials that can be applied to this item type
       const compatibleMaterials = specialMaterialsData.filter(material => {
-        // Handle both array of objects and single object formats
-        if (Array.isArray(material.value)) {
-          return material.value.some(valueObj => finalItemTable in valueObj);
-        } else if (typeof material.value === 'object') {
-          return finalItemTable in material.value;
-        }
-        return false;
+        return typeof material.value === 'object' && finalItemTable in material.value;
       });
 
       // If there are compatible materials, select one
@@ -122,17 +117,26 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
         const selectedMaterial = weightedRandom(compatibleMaterials);
         modifiers.push(selectedMaterial.name);
 
-        // Add the material's value for this specific item type
-        let materialValue = 0;
-        if (Array.isArray(selectedMaterial.value)) {
-          const valueObj = selectedMaterial.value.find(obj => finalItemTable in obj);
-          materialValue = valueObj ? valueObj[finalItemTable] : 0;
-        } else if (typeof selectedMaterial.value === 'object') {
-          materialValue = selectedMaterial.value[finalItemTable] || 0;
+        // Get the material's value for this specific item type
+        const materialValue = selectedMaterial.value[finalItemTable] || null;
+
+        // Check if it's a multiplier or a fixed value
+        if (materialValue !== null) {
+          if (typeof materialValue === 'string' && materialValue.endsWith('x')) {
+            // Multiplier format (e.g., "2x", "1.5x") - save for later
+            materialMultiplier = parseFloat(materialValue.slice(0, -1));
+          } else if (typeof materialValue === 'number') {
+            // Fixed value to add immediately
+            totalValue += materialValue;
+          }
         }
-        totalValue += materialValue;
       }
     }
+  }
+
+  // Apply multiplier at the very end, after all additions
+  if (materialMultiplier !== 1) {
+    totalValue = Math.floor(totalValue * materialMultiplier);
   }
 
   return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
@@ -148,16 +152,18 @@ const uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
 
 // Maximum number of reroll attempts to avoid infinite loops
 const MAX_REROLL_ATTEMPTS = 100;
+// Hard limit on total items output
+const MAX_ITEMS_OUTPUT = 100;
 
 // Determine target number of items and how many result sets
 // If -v is set, we create ONE result set with multiple items
 // If -v is NOT set, we create multiple result sets (one item each)
 const createMultipleResultSets = !userMaxValue;
-const numResultSets = createMultipleResultSets ? numberOfResults : 1;
+const numResultSets = createMultipleResultSets ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : 1;
 // When -v is set: if -n is also set, use -n as target, otherwise use MAX to fill budget
 // When -v is NOT set: just use 1 item per result set
 const targetItemCount = userMaxValue
-  ? (numberOfResults > 1 ? numberOfResults : MAX_REROLL_ATTEMPTS)
+  ? (numberOfResults > 1 ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : Math.min(MAX_REROLL_ATTEMPTS, MAX_ITEMS_OUTPUT))
   : 1;
 
 // Roll the specified number of times
