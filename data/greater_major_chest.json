@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Merciful baldric",
+    "type":"item",
+    "weight":35,
+    "value":60000
+  },
+  {
+    "name":"Mantle of faith",
+    "type":"item",
+    "weight":35,
+    "value":76000
+  },
+  {
+    "name":"Mantle of spell resistance",
+    "type":"item",
+    "weight":30,
+    "value":90000
+  }
+]

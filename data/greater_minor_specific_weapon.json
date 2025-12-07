@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Adamantine dagger",
+    "type":"item",
+    "weight":20,
+    "value":3002
+  },
+  {
+    "name":"Adamantine battleaxe",
+    "type":"item",
+    "weight":20,
+    "value":3010
+  },
+  {
+    "name":"Burrowing bullet, greater",
+    "type":"item",
+    "weight":10,
+    "value":3447
+  },
+  {
+    "name":"Slaying arrow, greater",
+    "type":"item",
+    "weight":20,
+    "value":4057
+  },
+  {
+    "name":"Lance of jousting",
+    "type":"item",
+    "weight":10,
+    "value":4310
+  },
+  {
+    "name":"Shatterspike",
+    "type":"item",
+    "weight":20,
+    "value":4315
+  }
+]

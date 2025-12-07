@@ -1,0 +1,20 @@
+[
+  {
+    "name":"Headband of arcane energy",
+    "type":"item",
+    "weight":30,
+    "value":20000
+  },
+  {
+    "name":"Headband of counterspelling",
+    "type":"item",
+    "weight":40,
+    "value":20000
+  },
+  {
+    "name":"Headband of knucklebones",
+    "type":"item",
+    "weight":30,
+    "value":27500
+  }
+]

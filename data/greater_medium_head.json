@@ -1,0 +1,80 @@
+[
+  {
+    "name":"Cat’s eye crown",
+    "type":"item",
+    "weight":6,
+    "value":18000
+  },
+  {
+    "name":"Maw of the wyrm",
+    "type":"item",
+    "weight":6,
+    "value":18000
+  },
+  {
+    "name":"Mitre of the hierophant",
+    "type":"item",
+    "weight":7,
+    "value":18000
+  },
+  {
+    "name":"Magician’s hat",
+    "type":"item",
+    "weight":8,
+    "value":20000
+  },
+  {
+    "name":"Circlet of mindsight",
+    "type":"item",
+    "weight":7,
+    "value":22000
+  },
+  {
+    "name":"Mask of the skull",
+    "type":"item",
+    "weight":8,
+    "value":22000
+  },
+  {
+    "name":"Howling helm",
+    "type":"item",
+    "weight":8,
+    "value":22600
+  },
+  {
+    "name":"Crown of blasting, major",
+    "type":"item",
+    "weight":12,
+    "value":23760
+  },
+  {
+    "name":"Helm of underwater action",
+    "type":"item",
+    "weight":10,
+    "value":24000
+  },
+  {
+    "name":"Crown of conquest",
+    "type":"item",
+    "weight":7,
+    "value":24600
+  },
+  {
+    "name":"Batrachian helm",
+    "type":"item",
+    "weight":6,
+    "value":26000
+  },
+  {
+    "name":"Helm of telepathy",
+    "type":"item",
+    "weight":9,
+    "value":27000
+  },
+  {
+    "name":"Plague mask",
+    "type":"item",
+    "weight":6,
+    "value":27000
+  }
+]

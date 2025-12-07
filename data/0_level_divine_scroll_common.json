@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Bleed",
+    "type":"item",
+    "weight":11,
+    "value":12.5
+  },
+  {
+    "name":"Create water",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Detect magic",
+    "type":"item",
+    "weight":13,
+    "value":12.5
+  },
+  {
+    "name":"Know direction",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Light",
+    "type":"item",
+    "weight":11,
+    "value":12.5
+  },
+  {
+    "name":"Mending",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Purify food and drink",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Read magic",
+    "type":"item",
+    "weight":13,
+    "value":12.5
+  },
+  {
+    "name":"Stabilize",
+    "type":"item",
+    "weight":12,
+    "value":12.5
+  }
+]

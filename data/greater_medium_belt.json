@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Monkey belt, greater",
+    "type":"item",
+    "weight":12,
+    "value":18000
+  },
+  {
+    "name":"Anaconda's coils",
+    "type":"item",
+    "weight":14,
+    "value":18500
+  },
+  {
+    "name":"Serpent belt, greater",
+    "type":"item",
+    "weight":12,
+    "value":20000
+  },
+  {
+    "name":"Belt of fallen heroes",
+    "type":"item",
+    "weight":15,
+    "value":21000
+  },
+  {
+    "name":"Gorgon belt",
+    "type":"item",
+    "weight":14,
+    "value":23000
+  },
+  {
+    "name":"Elemental earth belt",
+    "type":"item",
+    "weight":17,
+    "value":24000
+  },
+  {
+    "name":"Sash of flowing water",
+    "type":"item",
+    "weight":16,
+    "value":25000
+  }
+]

@@ -49,8 +49,11 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
   let selectedItem = weightedRandom(tableData, allowedRarities);
 
-  // Check if user max value is exceeded by this selection's max_value
+  // Check if user max value is exceeded by this selection's max_value or min_value
   if (userMaxValue && selectedItem.max_value && selectedItem.max_value > userMaxValue) {
+    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
+  }
+  if (userMaxValue !== null && selectedItem.min_value && selectedItem.min_value > userMaxValue) {
     return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
   }
 

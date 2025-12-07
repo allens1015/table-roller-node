@@ -1,0 +1,20 @@
+[
+  {
+    "name":"lesser_minor_scrolls",
+    "type":"table",
+    "weight":1,
+    "min_value":12.5
+  },
+  {
+    "name":"greater_minor_scrolls_rarity",
+    "type":"table",
+    "weight":1,
+    "min_value":12.5
+  },
+  {
+    "name":"lesser_medium_scrolls",
+    "type":"table",
+    "weight":1,
+    "min_value":150
+  }
+]

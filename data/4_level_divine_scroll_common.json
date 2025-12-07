@@ -1,0 +1,152 @@
+[
+  {
+    "name":"Air walk",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Chaos hammer",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Cure critical wounds",
+    "type":"item",
+    "weight":8,
+    "value":700
+  },
+  {
+    "name":"Death ward",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Dimensional anchor",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Discern lies",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Dismissal",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Divine power",
+    "type":"item",
+    "weight":5,
+    "value":700
+  },
+  {
+    "name":"Flame strike",
+    "type":"item",
+    "weight":6,
+    "value":700
+  },
+  {
+    "name":"Freedom of movement",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Holy smite",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Inflict critical wounds",
+    "type":"item",
+    "weight":5,
+    "value":700
+  },
+  {
+    "name":"Magic weapon, greater",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Neutralize poison",
+    "type":"item",
+    "weight":5,
+    "value":700
+  },
+  {
+    "name":"Order's wrath",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Poison",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Spell immunity",
+    "type":"item",
+    "weight":5,
+    "value":700
+  },
+  {
+    "name":"Spike stones",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Summon monster IV",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Summon nature's ally IV",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Tongues",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Unholy blight",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Divination",
+    "type":"item",
+    "weight":4,
+    "value":700
+  },
+  {
+    "name":"Planar ally, lesser",
+    "type":"item",
+    "weight":3,
+    "value":700
+  },
+  {
+    "name":"Restoration",
+    "type":"item",
+    "weight":5,
+    "value":700
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Assisting gloves",
+    "type":"item",
+    "weight":13,
+    "value":180
+  },
+  {
+    "name":"Claws of the ice bear",
+    "type":"item",
+    "weight":9,
+    "value":1300
+  },
+  {
+    "name":"Gloves of reconnaissance",
+    "type":"item",
+    "weight":12,
+    "value":2000
+  },
+  {
+    "name":"Glowing glove",
+    "type":"item",
+    "weight":12,
+    "value":2000
+  },
+  {
+    "name":"Apprentice’s cheating gloves",
+    "type":"item",
+    "weight":12,
+    "value":2200
+  },
+  {
+    "name":"Challenger’s gloves",
+    "type":"item",
+    "weight":12,
+    "value":2200
+  },
+  {
+    "name":"Gloves of larceny",
+    "type":"item",
+    "weight":10,
+    "value":2500
+  },
+  {
+    "name":"Healer’s gloves",
+    "type":"item",
+    "weight":10,
+    "value":2500
+  },
+  {
+    "name":"Engineer’s workgloves",
+    "type":"item",
+    "weight":10,
+    "value":3000
+  }
+]

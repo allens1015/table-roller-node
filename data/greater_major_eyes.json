@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Eyes of charming",
+    "type":"item",
+    "weight":18,
+    "value":56000
+  },
+  {
+    "name":"Monocle of the investigator",
+    "type":"item",
+    "weight":16,
+    "value":66000
+  },
+  {
+    "name":"Sea tyrant’s patch",
+    "type":"item",
+    "weight":14,
+    "value":70000
+  },
+  {
+    "name":"Swordmaster’s blindfold",
+    "type":"item",
+    "weight":15,
+    "value":80000
+  },
+  {
+    "name":"Mindmaster’s eyes",
+    "type":"item",
+    "weight":14,
+    "value":95000
+  },
+  {
+    "name":"Eyes of the dragon",
+    "type":"item",
+    "weight":13,
+    "value":110000
+  },
+  {
+    "name":"Truesight goggles",
+    "type":"item",
+    "weight":10,
+    "value":184800
+  }
+]

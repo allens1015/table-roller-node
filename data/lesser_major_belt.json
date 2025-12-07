@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Merform belt",
+    "type":"item",
+    "weight":12,
+    "value":32000
+  },
+  {
+    "name":"Belt of giant strength +6",
+    "type":"item",
+    "weight":18,
+    "value":36000
+  },
+  {
+    "name":"Belt of incredible dexterity +6",
+    "type":"item",
+    "weight":18,
+    "value":36000
+  },
+  {
+    "name":"Belt of mighty constitution +6",
+    "type":"item",
+    "weight":18,
+    "value":36000
+  },
+  {
+    "name":"Belt of physical might +4",
+    "type":"item",
+    "weight":22,
+    "value":40000
+  },
+  {
+    "name":"Belt of mighty hurling, greater",
+    "type":"item",
+    "weight":12,
+    "value":42000
+  }
+]

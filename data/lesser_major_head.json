@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Iron circlet of guarded souls",
+    "type":"item",
+    "weight":14,
+    "value":30000
+  },
+  {
+    "name":"Laurel of command",
+    "type":"item",
+    "weight":15,
+    "value":30000
+  },
+  {
+    "name":"Mask of giants, lesser",
+    "type":"item",
+    "weight":16,
+    "value":30000
+  },
+  {
+    "name":"Steel-mind cap",
+    "type":"item",
+    "weight":16,
+    "value":33600
+  },
+  {
+    "name":"Stormlord’s helm",
+    "type":"item",
+    "weight":17,
+    "value":35000
+  },
+  {
+    "name":"Helm of brilliance, lesser",
+    "type":"item",
+    "weight":22,
+    "value":36000
+  }
+]

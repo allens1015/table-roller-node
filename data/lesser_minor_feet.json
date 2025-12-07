@@ -1,0 +1,62 @@
+[
+  {
+    "name":"Boots of the cat",
+    "type":"item",
+    "weight":11,
+    "value":1000
+  },
+  {
+    "name":"Daredevil boots",
+    "type":"item",
+    "weight":11,
+    "value":1400
+  },
+  {
+    "name":"Boots of the enduring march",
+    "type":"item",
+    "weight":9,
+    "value":1500
+  },
+  {
+    "name":"Feather step slippers",
+    "type":"item",
+    "weight":10,
+    "value":2000
+  },
+  {
+    "name":"Boots of friendly terrain",
+    "type":"item",
+    "weight":9,
+    "value":2400
+  },
+  {
+    "name":"Boots of the winterlands",
+    "type":"item",
+    "weight":10,
+    "value":2500
+  },
+  {
+    "name":"Boots of elvenkind",
+    "type":"item",
+    "weight":16,
+    "value":2500
+  },
+  {
+    "name":"Acrobat slippers",
+    "type":"item",
+    "weight":9,
+    "value":3000
+  },
+  {
+    "name":"Horseshoes of speed",
+    "type":"item",
+    "weight":7,
+    "value":3000
+  },
+  {
+    "name":"Boots of the mire",
+    "type":"item",
+    "weight":8,
+    "value":3500
+  }
+]

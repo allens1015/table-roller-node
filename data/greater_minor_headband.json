@@ -1,0 +1,80 @@
+[
+  {
+    "name":"Headband of alluring charisma +2",
+    "type":"item",
+    "weight":9,
+    "value":4000
+  },
+  {
+    "name":"Headband of inspired wisdom +2",
+    "type":"item",
+    "weight":9,
+    "value":4000
+  },
+  {
+    "name":"Headband of vast intelligence +2",
+    "type":"item",
+    "weight":9,
+    "value":4000
+  },
+  {
+    "name":"Headband of aerial agility +2",
+    "type":"item",
+    "weight":6,
+    "value":4500
+  },
+  {
+    "name":"Shifter’s headband +2",
+    "type":"item",
+    "weight":6,
+    "value":4500
+  },
+  {
+    "name":"Headband of ponderous recollection",
+    "type":"item",
+    "weight":6,
+    "value":5100
+  },
+  {
+    "name":"Headband of ki focus",
+    "type":"item",
+    "weight":6,
+    "value":5400
+  },
+  {
+    "name":"Headband of unshakeable resolve",
+    "type":"item",
+    "weight":7,
+    "value":5600
+  },
+  {
+    "name":"Hollywreath band",
+    "type":"item",
+    "weight":8,
+    "value":5700
+  },
+  {
+    "name":"Headband of deathless devotion",
+    "type":"item",
+    "weight":8,
+    "value":6400
+  },
+  {
+    "name":"Phylactery of the shepherd",
+    "type":"item",
+    "weight":8,
+    "value":7000
+  },
+  {
+    "name":"Headband of intuition",
+    "type":"item",
+    "weight":9,
+    "value":7000
+  },
+  {
+    "name":"Headband of fortune’s favor",
+    "type":"item",
+    "weight":9,
+    "value":7000
+  }
+]

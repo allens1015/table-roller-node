@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Belt of tumbling",
+    "type":"item",
+    "weight":16,
+    "value":800
+  },
+  {
+    "name":"Beneficial bandolier",
+    "type":"item",
+    "weight":12,
+    "value":1000
+  },
+  {
+    "name":"Meridian belt",
+    "type":"item",
+    "weight":12,
+    "value":1000
+  },
+  {
+    "name":"Bladed belt",
+    "type":"item",
+    "weight":14,
+    "value":2000
+  },
+  {
+    "name":"Heavyload belt",
+    "type":"item",
+    "weight":16,
+    "value":2000
+  },
+  {
+    "name":"Aquatic cummerbund",
+    "type":"item",
+    "weight":14,
+    "value":2600
+  },
+  {
+    "name":"Equestrian belt",
+    "type":"item",
+    "weight":16,
+    "value":3200
+  }
+]

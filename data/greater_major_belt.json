@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Belt of stoneskin",
+    "type":"item",
+    "weight":25,
+    "value":60000
+  },
+  {
+    "name":"Belt of physical perfection +4",
+    "type":"item",
+    "weight":30,
+    "value":64000
+  },
+  {
+    "name":"Belt of physical might +6",
+    "type":"item",
+    "weight":20,
+    "value":90000
+  },
+  {
+    "name":"Shadowform belt",
+    "type":"item",
+    "weight":10,
+    "value":110000
+  },
+  {
+    "name":"Belt of physical perfection +6",
+    "type":"item",
+    "weight":10,
+    "value":144000
+  }
+]

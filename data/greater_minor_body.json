@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Cassock of the clergy",
+    "type":"item",
+    "weight":15,
+    "value":4600
+  },
+  {
+    "name":"Mnemonic vestments",
+    "type":"item",
+    "weight":15,
+    "value":5000
+  },
+  {
+    "name":"Robe of components",
+    "type":"item",
+    "weight":15,
+    "value":5000
+  },
+  {
+    "name":"Sorcerer’s robe",
+    "type":"item",
+    "weight":15,
+    "value":5000
+  },
+  {
+    "name":"Eidolon anchoring harness",
+    "type":"item",
+    "weight":15,
+    "value":6000
+  },
+  {
+    "name":"Robe of useful items",
+    "type":"item",
+    "weight":25,
+    "value":7000
+  }
+]

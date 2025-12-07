@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Vest of stable mutation",
+    "type":"item",
+    "weight":50,
+    "value":20000
+  },
+  {
+    "name":"Spectral shroud",
+    "type":"item",
+    "weight":50,
+    "value":26000
+  }
+]

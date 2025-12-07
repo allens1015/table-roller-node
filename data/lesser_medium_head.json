@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Helm of the mammoth lord",
+    "type":"item",
+    "weight":16,
+    "value":8500
+  },
+  {
+    "name":"Veil of fleeting glances",
+    "type":"item",
+    "weight":14,
+    "value":9000
+  },
+  {
+    "name":"Mask of a thousand tomes",
+    "type":"item",
+    "weight":16,
+    "value":10000
+  },
+  {
+    "name":"Medusa mask",
+    "type":"item",
+    "weight":17,
+    "value":10000
+  },
+  {
+    "name":"Cap of the free thinker",
+    "type":"item",
+    "weight":17,
+    "value":12000
+  },
+  {
+    "name":"Halo of inner calm",
+    "type":"item",
+    "weight":20,
+    "value":16000
+  }
+]

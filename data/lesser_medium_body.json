@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Robe of blending",
+    "type":"item",
+    "weight":15,
+    "value":8400
+  },
+  {
+    "name":"Blazing robes",
+    "type":"item",
+    "weight":11,
+    "value":11000
+  },
+  {
+    "name":"Shocking robe",
+    "type":"item",
+    "weight":11,
+    "value":11000
+  },
+  {
+    "name":"Voidfrost robes",
+    "type":"item",
+    "weight":11,
+    "value":11000
+  },
+  {
+    "name":"Bodywrap of mighty strikes +2",
+    "type":"item",
+    "weight":11,
+    "value":12000
+  },
+  {
+    "name":"Monk’s robe",
+    "type":"item",
+    "weight":16,
+    "value":13000
+  },
+  {
+    "name":"Robe of arcane heritage",
+    "type":"item",
+    "weight":25,
+    "value":16000
+  }
+]

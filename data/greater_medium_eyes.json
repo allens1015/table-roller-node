@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Darklands goggles",
+    "type":"item",
+    "weight":21,
+    "value":20000
+  },
+  {
+    "name":"Sniper goggles",
+    "type":"item",
+    "weight":19,
+    "value":20000
+  },
+  {
+    "name":"Rainbow lenses",
+    "type":"item",
+    "weight":18,
+    "value":21000
+  },
+  {
+    "name":"Annihilation spectacles",
+    "type":"item",
+    "weight":19,
+    "value":25000
+  },
+  {
+    "name":"Eyes of doom",
+    "type":"item",
+    "weight":23,
+    "value":25000
+  }
+]

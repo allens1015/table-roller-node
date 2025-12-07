@@ -1,0 +1,32 @@
+[
+  {
+    "name":"Bandages of rapid recovery",
+    "type":"item",
+    "weight":15,
+    "value":200
+  },
+  {
+    "name":"Quick runner's shirt",
+    "type":"item",
+    "weight":15,
+    "value":1000
+  },
+  {
+    "name":"Endless bandolier",
+    "type":"item",
+    "weight":20,
+    "value":1500
+  },
+  {
+    "name":"All tools vest",
+    "type":"item",
+    "weight":25,
+    "value":1800
+  },
+  {
+    "name":"Vest of surgery",
+    "type":"item",
+    "weight":25,
+    "value":3000
+  }
+]

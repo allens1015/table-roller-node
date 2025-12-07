@@ -1,0 +1,200 @@
+[
+  {
+    "name":"Air bubble",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Alarm",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Animate rope",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Ant haul",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Blend",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Break",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Color spray",
+    "type":"item",
+    "weight":5,
+    "value":25
+  },
+  {
+    "name":"Comprehend languages",
+    "type":"item",
+    "weight":3,
+    "value":25  
+  },
+  {
+    "name":"Corrosive touch",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Detect secret doors",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Detect undead",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Erase",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Flare burst",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Floating disk",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Hold portal",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Hydraulic push",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Icicle dagger",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Illusion of calm",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Jump",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Magic aura",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Mirror strike",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Mount",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Ray of sickening",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Reduce person",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Shadow weapon",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Shock shield",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Stone fist",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Touch of the sea",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Unseen servant",
+    "type":"item",
+    "weight":4,
+    "value":25
+  },
+  {
+    "name":"Urban grace",
+    "type":"item",
+    "weight":3,
+    "value":25
+  },
+  {
+    "name":"Vanish",
+    "type":"item",
+    "weight":5,
+    "value":25
+  },
+  {
+    "name":"Ventriloquism",
+    "type":"item",
+    "weight":2,
+    "value":25
+  },
+  {
+    "name":"Voice alteration",
+    "type":"item",
+    "weight":1,
+    "value":25
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name":"Judge’s wig",
+    "type":"item",
+    "weight":14,
+    "value":59200
+  },
+  {
+    "name":"Helm of teleportation",
+    "type":"item",
+    "weight":25,
+    "value":73500
+  },
+  {
+    "name":"Halo of menace",
+    "type":"item",
+    "weight":16,
+    "value":84000
+  },
+  {
+    "name":"Mask of giants, greater",
+    "type":"item",
+    "weight":13,
+    "value":90000
+  },
+  {
+    "name":"Helm of brilliance",
+    "type":"item",
+    "weight":15,
+    "value":125000
+  },
+  {
+    "name":"Helm of electric radiance",
+    "type":"item",
+    "weight":9,
+    "value":125000
+  },
+  {
+    "name":"Crown of heaven",
+    "type":"item",
+    "weight":8,
+    "value":150000
+  }
+]

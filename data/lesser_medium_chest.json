@@ -1,0 +1,38 @@
+[
+  {
+    "name":"Shirt of immolation",
+    "type":"item",
+    "weight":13,
+    "value":8000
+  },
+  {
+    "name":"Snakeskin tunic",
+    "type":"item",
+    "weight":15,
+    "value":8000
+  },
+  {
+    "name":"Bane baldric",
+    "type":"item",
+    "weight":12,
+    "value":10000
+  },
+  {
+    "name":"Unfettered shirt",
+    "type":"item",
+    "weight":20,
+    "value":10000
+  },
+  {
+    "name":"Poisoner’s jacket, lesser",
+    "type":"item",
+    "weight":20,
+    "value":12000
+  },
+  {
+    "name":"Vest of the cockroach",
+    "type":"item",
+    "weight":20,
+    "value":16000
+  }
+]

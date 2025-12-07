@@ -1,0 +1,68 @@
+[
+  {
+    "name":"Acid splash",
+    "type":"item",
+    "weight":9,
+    "value":12.5
+  },
+  {
+    "name":"Daze",
+    "type":"item",
+    "weight":8,
+    "value":12.5
+  },
+  {
+    "name":"Detect magic",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Flare",
+    "type":"item",
+    "weight":8,
+    "value":12.5
+  },
+  {
+    "name":"Light",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Mage hand",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Mending",
+    "type":"item",
+    "weight":8,
+    "value":12.5  
+  },
+  {
+    "name":"Prestidigitation",
+    "type":"item",
+    "weight":9,
+    "value":12.5
+  },
+  {
+    "name":"Ray of frost",
+    "type":"item",
+    "weight":9,
+    "value":12.5  
+  },
+  {
+    "name":"Read magic",
+    "type":"item",
+    "weight":10,
+    "value":12.5
+  },
+  {
+    "name":"Touch of fatigue",
+    "type":"item",
+    "weight":9,
+    "value":12.5
+  }
+]
