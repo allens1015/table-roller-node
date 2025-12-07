@@ -3,84 +3,98 @@
     "name":"Armored coat",
     "type":"item",
     "weight":1,
-    "value":50
+    "value":50,
+    "rarity":"uncommon"
   },
   {
     "name":"Chain coat",
     "type":"item",
     "weight":1,
-    "value":75
+    "value":75,
+    "rarity":"common"
   },
   {
     "name":"Erutaki coat",
     "type":"item",
     "weight":1,
-    "value":80
+    "value":80,
+    "rarity":"rare"
   },
   {
     "name":"Hide",
     "type":"item",
     "weight":1,
-    "value":15
+    "value":15,
+    "rarity":"common"
   },
   {
     "name":"Do-maru",
     "type":"item",
     "weight":1,
-    "value":200
+    "value":200,
+    "rarity":"rare" 
   },
   {
     "name":"Kikko",
     "type":"item",
     "weight":1,
-    "value":250
+    "value":250,
+    "rarity":"rare" 
   },
   {
     "name":"Lamellar (horn)",
     "type":"item",
     "weight":1,
-    "value":100
+    "value":100,
+    "rarity":"uncommon"
   },
   {
     "name":"Scale mail",
     "type":"item",
     "weight":1,
-    "value":50
+    "value":50,
+    "rarity":"common"
   },
   {
     "name":"Agile breastplate",
     "type":"item",
     "weight":1,
-    "value":400
+    "value":400,
+    "rarity":"rare"
   },
   {
     "name":"Breastplate",
     "type":"item",
     "weight":1,
-    "value":200
+    "value":200,
+    "rarity":"common"
   },
   {
     "name":"Chainmail",
     "type":"item",
     "weight":1,
-    "value":150
+    "value":150,
+    "rarity":"common"
   },
   {
     "name":"Four-mirror",
     "type":"item",
     "weight":1,
-    "value":125
+    "value":125,
+    "rarity":"rare"
   },
   {
     "name":"Lamellar (steel)",
     "type":"item",
     "weight":1,
-    "value":150
+    "value":150,
+    "rarity":"uncommon"
   },
   {
     "name":"Mountain pattern",
     "type":"item",
     "weight":1,
-    "value":250
+    "value":250,
+    "rarity":"rare"
   }
 ]

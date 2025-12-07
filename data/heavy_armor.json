@@ -3,96 +3,112 @@
     "name":"Banded mail",
     "type":"item",
     "weight":1,
-    "value":250
+    "value":250,
+    "rarity":"common"
   },
   {
     "name":"Field plate",
     "type":"item",
     "weight":1,
-    "value":1200
+    "value":1200,
+    "rarity":"uncommon" 
   },
   {
     "name":"Kusari gusoku",
     "type":"item",
     "weight":1,
-    "value":350
+    "value":350,
+    "rarity":"rare"
   },
   {
     "name":"Lamellar (iron)",
     "type":"item",
     "weight":1,
-    "value":200
+    "value":200,
+    "rarity":"uncommon"
   },
   {
     "name":"Splint mail",
     "type":"item",
     "weight":1,
-    "value":200
+    "value":200,
+    "rarity":"common"
   },
   {
     "name":"Tatami-do",
     "type":"item",
     "weight":1,
-    "value":1000
+    "value":1000,
+    "rarity":"rare"
   },
   {
     "name":"Agile half-plate",
     "type":"item",
     "weight":1,
-    "value":850
+    "value":850,
+    "rarity":"rare"
   },
   {
     "name":"Alkenstar fortress plate",
     "type":"item",
     "weight":1,
-    "value":2100
+    "value":2100,
+    "rarity":"rare"
   },
   {
     "name":"Half-plate",
     "type":"item",
     "weight":1,
-    "value":600
+    "value":600,
+    "rarity":"common"
   },
   {
     "name":"Hellknight half-plate",
     "type":"item",
     "weight":1,
-    "value":850
+    "value":850,
+    "rarity":"rare"
   },
   {
     "name":"Lamellar (stone)",
     "type":"item",
     "weight":1,
-    "value":500
+    "value":500,
+    "rarity":"uncommon"
   },
   {
     "name":"O-yoroi",
     "type":"item",
     "weight":1,
-    "value":1700
+    "value":1700,
+    "rarity":"rare"
   },
   {
     "name":"Full plate",
     "type":"item",
     "weight":1,
-    "value":1500
+    "value":1500,
+    "rarity":"common"
   },
   {
     "name":"Gray maiden plate",
     "type":"item",
     "weight":1,
-    "value":1500
+    "value":1500,
+    "rarity":"rare"
   },
   {
     "name":"Hellknight plate",
     "type":"item",
     "weight":1,
-    "value":2000
+    "value":2000,
+    "rarity":"rare"
   },
   {
     "name":"Stoneplate",
     "type":"item",
     "weight":1,
-    "value":1800
+    "value":1800,
+    "rarity":"rare"
   }
 ]

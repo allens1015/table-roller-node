@@ -1,0 +1,15 @@
+[
+  {
+    "name":"Mithral shirt",
+    "value":1100,
+    "weight":50,
+    "type":"item"
+  },
+  {
+    "name":"armor",
+    "modifier":["masterwork","special_materials"],
+    "value":150,
+    "weight":50,
+    "type":"table"
+  }
+]
