@@ -26,23 +26,26 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
   }
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null) {
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20) {
   breadcrumb.push(tableName);
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
   const tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
 
-  // Determine allowed rarities based on random roll (10% rare, 20% uncommon, always common)
+  // Determine allowed rarities based on random roll
+  // Each rarity gets an exclusive percentage chance
   const rarityRoll = Math.random() * 100;
   let allowedRarities = ['common'];
-  if (rarityRoll < 10) {
-    // 10% chance: can pick rare, uncommon, or common
-    allowedRarities = ['common', 'uncommon', 'rare'];
-  } else if (rarityRoll < 30) {
-    // 20% chance (10-30): can pick uncommon or common
-    allowedRarities = ['common', 'uncommon'];
+  if (rarityRoll < rareChance) {
+    // Rare chance: only rare items
+    allowedRarities = ['rare'];
+  } else if (rarityRoll < rareChance + uncommonChance) {
+    // Uncommon chance: only uncommon items
+    allowedRarities = ['uncommon'];
+  } else {
+    // Common chance: only common items (remaining percentage)
+    allowedRarities = ['common'];
   }
-  // Otherwise: only common (70% chance)
 
   let selectedItem = weightedRandom(tableData, allowedRarities);
 
@@ -140,6 +143,8 @@ const argv = minimist(process.argv.slice(2));
 const originTable = argv.o || argv.origin || 'armor';
 const numberOfResults = argv.n || argv.number || 1;
 const userMaxValue = argv.v || argv.value || null;
+const rareChance = argv.r || argv.rare || 10;  // Default 10%
+const uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
 
 // Maximum number of reroll attempts to avoid infinite loops
 const MAX_REROLL_ATTEMPTS = 100;
@@ -169,7 +174,7 @@ for (let i = 0; i < numResultSets; i++) {
     // Try to roll a single item that fits within remaining budget
     do {
       const remainingBudget = userMaxValue ? userMaxValue - accumulatedValue : null;
-      result = rollTable(originTable, [], [], 0, null, remainingBudget, null);
+      result = rollTable(originTable, [], [], 0, null, remainingBudget, null, rareChance, uncommonChance);
       rollAttempts++;
 
       // Check if we need to reroll
