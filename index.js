@@ -110,13 +110,7 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
 
 // Helper function to process a single selected item through tables and modifiers
 function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, finalItemTable) {
-  // Check if user max value is exceeded by this selection's max_value or min_value
-  if (config.userMaxValue && selectedItem.max_value && selectedItem.max_value > config.userMaxValue) {
-    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
-  }
-  if (config.userMaxValue !== null && selectedItem.min_value && selectedItem.min_value > config.userMaxValue) {
-    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
-  }
+  // No budget validation - just process the item
 
   // Track modifiers that need special processing (like special_materials)
   const pendingSpecialModifiers = [];
@@ -163,17 +157,12 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
       return nestedResult;
     }
 
-    // Otherwise, use the nested result's item
-    selectedItem = nestedResult.item;
-    breadcrumb = nestedResult.breadcrumb;
-    modifiers = nestedResult.modifiers;
-    totalValue = nestedResult.totalValue;
-    maxValue = nestedResult.maxValue;
-    finalItemTable = nestedResult.finalItemTable;
-    break; // Exit the while loop since we've fully resolved this item
+    // Otherwise, use the nested result's item - the value is already included in totalValue
+    // So we just return the nested result directly without adding the value again
+    return nestedResult;
   }
 
-  // Add the final item's value to the total
+  // Add the final item's value to the total (only for non-table items)
   // Support dice notation (e.g., "2d4") or numeric values
   if (selectedItem.value) {
     let rolledValue;
@@ -237,7 +226,7 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
     totalValue = Math.floor(totalValue * materialMultiplier);
   }
 
-  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
+  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, finalItemTable };
 }
 
 function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, finalItemTable = null) {
@@ -301,27 +290,17 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     for (const itemInSet of itemsToProcess) {
       // Process this item as if it were selected directly
-      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), totalValue, maxValue, finalItemTable);
+      // Each item in a set should start with totalValue=0, not accumulate from previous items
+      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), 0, maxValue, finalItemTable);
       if (itemResult) {
         setResults.push(itemResult);
         setTotalValue += itemResult.totalValue;
       }
     }
 
-    // Check if the wrapper object has a max_value for the entire set
-    // When userMaxValue is higher than the set's max_value, allow the set to exceed its tier up to the userMaxValue
-    // This enables selecting a lower tier (e.g., 500) but using a higher budget (e.g., 600) for that tier's items
-    const effectiveLimit = (config.userMaxValue && config.userMaxValue > selectedItem.max_value)
-      ? config.userMaxValue
-      : selectedItem.max_value;
-
-    if (selectedItem.max_value && setTotalValue > effectiveLimit) {
-      // The total set value exceeds the effective limit, mark as exceeded
-      return { isSet: true, setResults: [], exceeded: true, maxValue: selectedItem.max_value };
-    }
-
     // Return a special marker indicating this is a set of results
-    return { isSet: true, setResults };
+    // No budget validation - just return the set with whatever values were rolled
+    return { isSet: true, setResults, maxValue: selectedItem.max_value };
   }
 
   // Process the single selected item
@@ -340,141 +319,31 @@ config.uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
 const useMaxFilter = argv.max !== undefined;  // Whether to filter by max_value
 config.filterMaxValue = useMaxFilter ? config.userMaxValue : null;  // Use userMaxValue for filtering when --max is set
 
-// Maximum number of reroll attempts to avoid infinite loops
-const MAX_REROLL_ATTEMPTS = 1000;
-// Hard limit on total items output
-const MAX_ITEMS_OUTPUT = 100;
-
-// Determine target number of items and how many result sets
-// If -v is set, we create ONE result set with multiple items
-// If -v is NOT set, we create multiple result sets (one item each)
-const createMultipleResultSets = !config.userMaxValue;
-const numResultSets = createMultipleResultSets ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : 1;
-// When -v is set: if -n is also set, use -n as target, otherwise use MAX to fill budget
-// When -v is NOT set: just use 1 item per result set
-const targetItemCount = config.userMaxValue
-  ? (numberOfResults > 1 ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : Math.min(MAX_REROLL_ATTEMPTS, MAX_ITEMS_OUTPUT))
-  : 1;
-
 // Roll the specified number of times
-for (let i = 0; i < numResultSets; i++) {
+for (let i = 0; i < numberOfResults; i++) {
   const results = [];
   let accumulatedValue = 0;
-  let attempts = 0;
-  let setRollCount = 0; // Track how many times we've rolled the entire set
 
-  // Keep rolling and accumulating items until we can't add more without exceeding the limit
-  while (true) {
-    let result;
-    let rollAttempts = 0;
+  // Roll once - no reroll logic, no budget validation
+  const result = rollTable(originTable, [], [], 0, null, null);
 
-    // Try to roll a single item (or set of items) that fits within remaining budget
-    do {
-      const remainingBudget = config.userMaxValue ? config.userMaxValue - accumulatedValue : null;
-      result = rollTable(originTable, [], [], 0, null, null);
-      rollAttempts++;
-
-      // Check if we need to reroll
-      let shouldReroll = false;
-
-      // If this is a set of results, check if any item in the set needs rerolling
-      if (result.isSet) {
-        // Check if the set itself was marked as exceeded (wrapper's max_value exceeded)
-        if (result.exceeded) {
-          shouldReroll = true;
-        } else {
-          // Check if any item in the set exceeds constraints
-          let totalSetValue = 0;
-          let setExceeded = false;
-
-          for (const setItem of result.setResults) {
-            if (setItem.exceeded) {
-              setExceeded = true;
-              break;
-            }
-            if (setItem.maxValue && setItem.totalValue > setItem.maxValue) {
-              setExceeded = true;
-              break;
-            }
-            totalSetValue += setItem.totalValue;
-          }
-
-          if (setExceeded || (remainingBudget !== null && totalSetValue > remainingBudget)) {
-            shouldReroll = true;
-          }
-        }
-      } else {
-        // Single item - existing logic
-        if (result.exceeded) {
-          shouldReroll = true;
-        }
-        else if (result.maxValue && result.totalValue > result.maxValue) {
-          shouldReroll = true;
-        }
-        else if (remainingBudget !== null && result.totalValue > remainingBudget) {
-          shouldReroll = true;
-        }
-      }
-
-      if (shouldReroll) {
-        if (rollAttempts >= MAX_REROLL_ATTEMPTS) {
-          // Give up after max attempts
-          result = null;
-          break;
-        }
-        // Otherwise continue the loop to reroll
-      } else {
-        // Valid result, break out of the loop
-        break;
-      }
-    } while (true);
-
-    // If we couldn't find a valid item, stop trying to add more
-    if (!result || (result.isSet && result.setResults.length === 0) || (!result.isSet && !result.item)) {
-      break;
+  // Process the result
+  if (result.isSet) {
+    // Add all items from the set
+    for (const setItem of result.setResults) {
+      results.push(setItem);
+      accumulatedValue += setItem.totalValue;
     }
-
-    // Add this result to our collection
-    if (result.isSet) {
-      // Add all items from the set, marking them with the current set roll count
-      for (const setItem of result.setResults) {
-        setItem.setIndex = setRollCount;
-        results.push(setItem);
-        accumulatedValue += setItem.totalValue;
-        attempts++;
-      }
-      setRollCount++; // Increment after adding a complete set
-    } else {
-      // Add single item
-      result.setIndex = setRollCount;
-      results.push(result);
-      accumulatedValue += result.totalValue;
-      attempts++;
-      setRollCount++; // Increment for single items too
-    }
-
-    // Stop conditions:
-    // 1. If no user max value is set, stop after one item
-    // 2. If we've reached the target item count
-    // 3. If we've hit the safety limit
-    if (!config.userMaxValue || attempts >= targetItemCount || attempts >= MAX_REROLL_ATTEMPTS) {
-      break;
-    }
+  } else if (result.item) {
+    // Add single item
+    results.push(result);
+    accumulatedValue += result.totalValue;
   }
 
   // Output all results
   if (results.length > 0) {
-    // Track set boundaries for visual separation
-    let currentSetIndex = 0;
-
     for (let idx = 0; idx < results.length; idx++) {
       const result = results[idx];
-
-      // Check if we need to insert a separator (when setIndex changes)
-      if (result.setIndex !== undefined && result.setIndex > currentSetIndex) {
-        console.log('---'); // Separator between sets
-        currentSetIndex = result.setIndex;
-      }
 
       // Build the final item name with modifiers as prefix
       const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
@@ -514,8 +383,8 @@ for (let i = 0; i < numResultSets; i++) {
     }
 
     // Output total if multiple items were rolled
-    if (config.userMaxValue && results.length > 1) {
-      console.log(`Total: ${accumulatedValue}gp / ${config.userMaxValue}gp (${results.length} items)`);
+    if (results.length > 1) {
+      console.log(`Total: ${accumulatedValue}gp (${results.length} items)`);
     }
   } else {
     console.error('Error: Could not generate a valid result');
