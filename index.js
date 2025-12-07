@@ -4,6 +4,49 @@ const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 
+// Function to parse and roll dice notation (e.g., "2d4", "1d6", "3d10")
+// Supports arithmetic operations: "2d4*10", "2d4/10", etc.
+function rollDice(notation) {
+  if (typeof notation !== 'string') {
+    return notation; // If it's already a number, return it
+  }
+
+  // Check for multiplication (e.g., "2d4*10")
+  const multMatch = notation.match(/^(\d+d\d+)\s*\*\s*(\d+(?:\.\d+)?)$/i);
+  if (multMatch) {
+    const [, diceNotation, multiplier] = multMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll * parseFloat(multiplier);
+  }
+
+  // Check for division (e.g., "2d4/10")
+  const divMatch = notation.match(/^(\d+d\d+)\s*\/\s*(\d+(?:\.\d+)?)$/i);
+  if (divMatch) {
+    const [, diceNotation, divisor] = divMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll / parseFloat(divisor);
+  }
+
+  // Original dice notation parsing
+  const match = notation.match(/^(\d+)d(\d+)$/i);
+  if (!match) {
+    // Not a valid dice notation, try to parse as number
+    const parsed = parseFloat(notation);
+    return isNaN(parsed) ? 0 : parsed;
+  }
+
+  const [, numDice, dieSize] = match;
+  const count = parseInt(numDice, 10);
+  const sides = parseInt(dieSize, 10);
+
+  let total = 0;
+  for (let i = 0; i < count; i++) {
+    total += Math.floor(Math.random() * sides) + 1;
+  }
+
+  return total;
+}
+
 function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare']) {
   // Filter items based on allowed rarities (assume 'common' if no rarity property)
   // Arrays and objects with 'items' property are always included (they represent sets of items)
@@ -79,7 +122,7 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
 
     // Add the value of items with modifiers to the total
     if (selectedItem.modifier && selectedItem.value) {
-      totalValue += selectedItem.value;
+      totalValue += rollDice(selectedItem.value);
     }
 
     // If this item has a max_value, set it for validation later
@@ -97,8 +140,28 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
   }
 
   // Add the final item's value to the total
+  // Support dice notation (e.g., "2d4") or numeric values
   if (selectedItem.value) {
-    totalValue += selectedItem.value;
+    let rolledValue;
+
+    // Handle display_value for showing different units (e.g., silver, copper)
+    // If display_value exists, roll it and calculate gold value from the rolled display quantity
+    if (selectedItem.display_value) {
+      selectedItem.displayQuantity = rollDice(selectedItem.display_value);
+      // Calculate the actual gold value by dividing the display quantity appropriately
+      // For silver: displayQuantity / 10, for copper: displayQuantity / 100
+      rolledValue = selectedItem.displayQuantity / 10; // Default: silver conversion
+      if (selectedItem.name.toLowerCase().includes('copper')) {
+        rolledValue = selectedItem.displayQuantity / 100;
+      } else if (selectedItem.name.toLowerCase().includes('platinum')) {
+        rolledValue = selectedItem.displayQuantity * 10;
+      }
+    } else {
+      rolledValue = rollDice(selectedItem.value);
+    }
+
+    totalValue += rolledValue;
+    selectedItem.rolledValue = rolledValue;
   }
 
   // Process special_materials modifiers now that we know the final item table
@@ -326,7 +389,31 @@ for (let i = 0; i < numResultSets; i++) {
       const itemRarity = result.item.rarity || 'common';
       const rarityText = (itemRarity === 'uncommon' || itemRarity === 'rare') ? ` (${itemRarity})` : '';
 
-      const finalItemName = `${modifierPrefix}${result.item.name} (${result.totalValue}gp)${rarityText}`;
+      // Handle dice notation display - put it before the item name
+      let itemNameWithDice = result.item.name;
+      let valueDisplay = `${result.totalValue}gp`;
+
+      // If there's a display quantity (for currencies like silver), show the conversion
+      if (result.item.displayQuantity !== undefined && result.item.display_value) {
+        itemNameWithDice = `${result.item.display_value} ${result.item.name}`;
+        // Determine the currency unit based on the name
+        let unitAbbrev = 'sp'; // Default to silver pieces
+        if (result.item.name.toLowerCase().includes('copper')) {
+          unitAbbrev = 'cp';
+        } else if (result.item.name.toLowerCase().includes('platinum')) {
+          unitAbbrev = 'pp';
+        } else if (result.item.name.toLowerCase().includes('gold')) {
+          unitAbbrev = 'gp';
+        }
+        valueDisplay = `${result.item.displayQuantity}${unitAbbrev} > ${result.totalValue}gp`;
+      }
+      // Otherwise show the dice notation if it was rolled
+      else if (result.item.rolledValue !== undefined && typeof result.item.value === 'string' && result.item.value.match(/\d+d\d+/i)) {
+        // Show the full expression (including *, /, etc.) before the item name
+        itemNameWithDice = `${result.item.value} ${result.item.name}`;
+      }
+
+      const finalItemName = `${modifierPrefix}${itemNameWithDice} (${valueDisplay})${rarityText}`;
 
       // Output the breadcrumb trail and the selected item's name
       console.log(`${result.breadcrumb.join(' > ')} > ${finalItemName}`);
