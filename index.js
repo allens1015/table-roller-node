@@ -206,11 +206,26 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
   return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20) {
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20, filterMaxValue = null) {
   breadcrumb.push(tableName);
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
-  const tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
+  let tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
+
+  // Filter by max_value if specified
+  if (filterMaxValue !== null) {
+    // Find all items with max_value <= filterMaxValue
+    const validItems = tableData.filter(item => {
+      return item.max_value && item.max_value <= filterMaxValue;
+    });
+
+    if (validItems.length > 0) {
+      // Find the highest max_value among valid items (closest to filterMaxValue)
+      const closestMaxValue = Math.max(...validItems.map(item => item.max_value));
+      // Filter to only items with that max_value
+      tableData = validItems.filter(item => item.max_value === closestMaxValue);
+    }
+  }
 
   // Determine allowed rarities based on random roll
   // Each rarity gets an exclusive percentage chance
@@ -244,13 +259,23 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
   if (itemsToProcess) {
     // Process each item in the set and return multiple results
     const setResults = [];
+    let setTotalValue = 0;
+
     for (const itemInSet of itemsToProcess) {
       // Process this item as if it were selected directly
       const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities);
       if (itemResult) {
         setResults.push(itemResult);
+        setTotalValue += itemResult.totalValue;
       }
     }
+
+    // Check if the wrapper object has a max_value for the entire set
+    if (selectedItem.max_value && setTotalValue > selectedItem.max_value) {
+      // The total set value exceeds the max, mark as exceeded
+      return { isSet: true, setResults: [], exceeded: true, maxValue: selectedItem.max_value };
+    }
+
     // Return a special marker indicating this is a set of results
     return { isSet: true, setResults };
   }
@@ -266,6 +291,8 @@ const numberOfResults = argv.n || argv.number || 1;
 const userMaxValue = argv.v || argv.value || null;
 const rareChance = argv.r || argv.rare || 10;  // Default 10%
 const uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
+const useMaxFilter = argv.max !== undefined;  // Whether to filter by max_value
+const filterMaxValue = useMaxFilter ? userMaxValue : null;  // Use userMaxValue for filtering when --max is set
 
 // Maximum number of reroll attempts to avoid infinite loops
 const MAX_REROLL_ATTEMPTS = 100;
@@ -297,7 +324,7 @@ for (let i = 0; i < numResultSets; i++) {
     // Try to roll a single item (or set of items) that fits within remaining budget
     do {
       const remainingBudget = userMaxValue ? userMaxValue - accumulatedValue : null;
-      result = rollTable(originTable, [], [], 0, null, remainingBudget, null, rareChance, uncommonChance);
+      result = rollTable(originTable, [], [], 0, null, remainingBudget, null, rareChance, uncommonChance, filterMaxValue);
       rollAttempts++;
 
       // Check if we need to reroll
@@ -305,24 +332,29 @@ for (let i = 0; i < numResultSets; i++) {
 
       // If this is a set of results, check if any item in the set needs rerolling
       if (result.isSet) {
-        // Check if any item in the set exceeds constraints
-        let totalSetValue = 0;
-        let setExceeded = false;
-
-        for (const setItem of result.setResults) {
-          if (setItem.exceeded) {
-            setExceeded = true;
-            break;
-          }
-          if (setItem.maxValue && setItem.totalValue > setItem.maxValue) {
-            setExceeded = true;
-            break;
-          }
-          totalSetValue += setItem.totalValue;
-        }
-
-        if (setExceeded || (remainingBudget && totalSetValue > remainingBudget)) {
+        // Check if the set itself was marked as exceeded (wrapper's max_value exceeded)
+        if (result.exceeded) {
           shouldReroll = true;
+        } else {
+          // Check if any item in the set exceeds constraints
+          let totalSetValue = 0;
+          let setExceeded = false;
+
+          for (const setItem of result.setResults) {
+            if (setItem.exceeded) {
+              setExceeded = true;
+              break;
+            }
+            if (setItem.maxValue && setItem.totalValue > setItem.maxValue) {
+              setExceeded = true;
+              break;
+            }
+            totalSetValue += setItem.totalValue;
+          }
+
+          if (setExceeded || (remainingBudget && totalSetValue > remainingBudget)) {
+            shouldReroll = true;
+          }
         }
       } else {
         // Single item - existing logic

@@ -14,25 +14,107 @@
                 "type":"item"
             },
             {
-                "name":"light_armor",
+                "name":"lesser_minor_potions",
+                "type":"table"
+            }
+        ],
+        "max_value": 50
+    },
+    {
+        "weight":1,
+        "items":[
+            {
+                "name":"gold",
+                "value":"2d4",
+                "type":"item"
+            },
+            {
+                "name":"silver",
+                "value":"2d4",
+                "display_value":"2d4*10",
+                "type":"item"
+            },
+            {
+                "name":"light_armor_or_shield",
                 "modifier":"masterwork",
                 "value":150,
-                "max_value":200,
                 "type":"table"
             },
             {
-                "name":"med_armor",
-                "max_value":200,
+                "name":"lesser_minor_potions",
                 "type":"table"
             }
-        ]
+        ],
+        "max_value": 250
     },
     {
-        "name":"heavy_armor",
-        "modifier":"masterwork",
-        "value":150,
-        "max_value":1500,
         "weight":1,
-        "type":"table"
+        "items":[
+            {
+                "name":"gold",
+                "value":"2d4",
+                "type":"item"
+            },
+            {
+                "name":"silver",
+                "value":"2d4",
+                "display_value":"2d4*10",
+                "type":"item"
+            },
+            {
+                "name":"med_armor",
+                "modifier":"masterwork",
+                "value":150,
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            }
+        ],
+        "max_value": 350
+    },
+    {
+        "weight":1,
+        "items":[
+            {
+                "name":"gold",
+                "value":"2d4",
+                "type":"item"
+            },
+            {
+                "name":"silver",
+                "value":"2d4",
+                "display_value":"2d4*10",
+                "type":"item"
+            },
+            {
+                "name":"weapons",
+                "modifier":"masterwork",
+                "value":350,
+                "type":"table"
+            },
+            {
+                "name":"lesser_minor_potions",
+                "type":"table"
+            }
+        ],
+        "max_value": 400
+    },
+    {
+        "weight":1,
+        "items":[
+            {
+                "name":"weapons",
+                "modifier":"masterwork",
+                "value":350,
+                "type":"table"
+            },
+            {
+                "name":"greater_minor_potions",
+                "type":"table"
+            }
+        ],
+        "max_value": 500
     }
 ]

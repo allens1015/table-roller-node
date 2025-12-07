@@ -1,0 +1,184 @@
+[
+  {
+    "name":"Haramaki",
+    "type":"item",
+    "weight":2,
+    "value":3,
+    "rarity":"rare"
+  },
+  {
+    "name":"Padded",
+    "type":"item",
+    "weight":3,
+    "value":5,
+    "rarity":"common"
+  },
+  {
+    "name":"Quilted cloth",
+    "type":"item",
+    "weight":3,
+    "value":100,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Silken ceremonial",
+    "type":"item",
+    "weight":2,
+    "value":30,
+    "rarity":"rare"
+  },
+  {
+    "name":"Lamellar cuirass",
+    "type":"item",
+    "weight":2,
+    "value":15,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Leather",
+    "type":"item",
+    "weight":5,
+    "value":10,
+    "rarity":"common"
+  },
+  {
+    "name":"Parade",
+    "type":"item",
+    "weight":3,
+    "value":25,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Studded leather",
+    "type":"item",
+    "weight":5,
+    "value":25,
+    "rarity":"common"
+  },
+  {
+    "name":"Wooden",
+    "type":"item",
+    "weight":4,
+    "value":20,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Chain shirt",
+    "type":"item",
+    "weight":3,
+    "value":100,
+    "rarity":"common"
+  },
+  {
+    "name":"Lamellar (leather)",
+    "type":"item",
+    "weight":3,
+    "value":60,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Buckler",
+    "type":"item",
+    "weight":1,
+    "value":5,
+    "rarity":"common"
+  },
+  {
+    "name":"Klar",
+    "type":"item",
+    "weight":1,
+    "value":12,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Light steel shield",
+    "type":"item",
+    "weight":1,
+    "value":9,
+    "rarity":"common"
+  },
+  {
+    "name":"Light steel quickdraw shield",
+    "type":"item",
+    "weight":1,
+    "value":59,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Light wooden shield",
+    "type":"item",
+    "weight":1,
+    "value":3,
+    "rarity":"common"
+  },
+  {
+    "name":"Light wooden quickdraw shield",
+    "type":"item",
+    "weight":1,
+    "value":53,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Madu (leather)",
+    "type":"item",
+    "weight":1,
+    "value":40,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Madu (steel)",
+    "type":"item",
+    "weight":1,
+    "value":50,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Poisoner's Buckler",
+    "type":"item",
+    "weight":1,
+    "value":1505,
+    "rarity":"rare"
+  },
+  {
+    "name":"War-shield, dwarven",
+    "type":"item",
+    "weight":1,
+    "value":50,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Heavy steel shield",
+    "type":"item",
+    "weight":1,
+    "value":20,
+    "rarity":"common"
+  },
+  {
+    "name":"Heavy wooden shield",
+    "type":"item",
+    "weight":1,
+    "value":7,
+    "rarity":"common"
+  },
+  {
+    "name":"Snarlshield, steel",
+    "type":"item",
+    "weight":1,
+    "value":50,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Snarlshield, wooden",
+    "type":"item",
+    "weight":1,
+    "value":37,
+    "rarity":"uncommon"
+  },
+  {
+    "name":"Tower shield",
+    "type":"item",
+    "weight":1,
+    "value":30,
+    "rarity":"common"
+  }
+]
