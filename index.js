@@ -144,59 +144,102 @@ const userMaxValue = argv.v || argv.value || null;
 // Maximum number of reroll attempts to avoid infinite loops
 const MAX_REROLL_ATTEMPTS = 100;
 
+// Determine target number of items and how many result sets
+// If -v is set, we create ONE result set with multiple items
+// If -v is NOT set, we create multiple result sets (one item each)
+const createMultipleResultSets = !userMaxValue;
+const numResultSets = createMultipleResultSets ? numberOfResults : 1;
+// When -v is set: if -n is also set, use -n as target, otherwise use MAX to fill budget
+// When -v is NOT set: just use 1 item per result set
+const targetItemCount = userMaxValue
+  ? (numberOfResults > 1 ? numberOfResults : MAX_REROLL_ATTEMPTS)
+  : 1;
+
 // Roll the specified number of times
-for (let i = 0; i < numberOfResults; i++) {
-  let result;
+for (let i = 0; i < numResultSets; i++) {
+  const results = [];
+  let accumulatedValue = 0;
   let attempts = 0;
 
-  // Keep rolling until we get a valid result (within max_value) or reach max attempts
-  do {
-    result = rollTable(originTable, [], [], 0, null, userMaxValue, null);
-    attempts++;
+  // Keep rolling and accumulating items until we can't add more without exceeding the limit
+  while (true) {
+    let result;
+    let rollAttempts = 0;
 
-    // Check if we need to reroll
-    let shouldReroll = false;
+    // Try to roll a single item that fits within remaining budget
+    do {
+      const remainingBudget = userMaxValue ? userMaxValue - accumulatedValue : null;
+      result = rollTable(originTable, [], [], 0, null, remainingBudget, null);
+      rollAttempts++;
 
-    // If user set a max value and the selection was rejected, reroll
-    if (result.exceeded) {
-      shouldReroll = true;
-    }
-    // If there's a max_value constraint and we've exceeded it, reroll
-    else if (result.maxValue && result.totalValue > result.maxValue) {
-      shouldReroll = true;
-    }
-    // If user set a max value and total exceeds it, reroll
-    else if (userMaxValue && result.totalValue > userMaxValue) {
-      shouldReroll = true;
-    }
+      // Check if we need to reroll
+      let shouldReroll = false;
 
-    if (shouldReroll) {
-      if (attempts >= MAX_REROLL_ATTEMPTS) {
-        // Give up after max attempts and use the last result
-        const constraintValue = userMaxValue || result.maxValue;
-        console.error(`Warning: Could not find item within max value (${constraintValue}gp) after ${MAX_REROLL_ATTEMPTS} attempts`);
+      // If user set a max value and the selection was rejected, reroll
+      if (result.exceeded) {
+        shouldReroll = true;
+      }
+      // If there's a max_value constraint and we've exceeded it, reroll
+      else if (result.maxValue && result.totalValue > result.maxValue) {
+        shouldReroll = true;
+      }
+      // If user set a max value and total would exceed it, reroll
+      else if (remainingBudget && result.totalValue > remainingBudget) {
+        shouldReroll = true;
+      }
+
+      if (shouldReroll) {
+        if (rollAttempts >= MAX_REROLL_ATTEMPTS) {
+          // Give up after max attempts
+          result = null;
+          break;
+        }
+        // Otherwise continue the loop to reroll
+      } else {
+        // Valid result, break out of the loop
         break;
       }
-      // Otherwise continue the loop to reroll
-    } else {
-      // Valid result, break out of the loop
+    } while (true);
+
+    // If we couldn't find a valid item, stop trying to add more
+    if (!result || !result.item) {
       break;
     }
-  } while (true);
 
-  // Only output if we have a valid item
-  if (result.item) {
-    // Build the final item name with modifiers as prefix
-    const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
+    // Add this result to our collection
+    results.push(result);
+    accumulatedValue += result.totalValue;
+    attempts++;
 
-    // Add rarity to the output if it's uncommon or rare
-    const itemRarity = result.item.rarity || 'common';
-    const rarityText = (itemRarity === 'uncommon' || itemRarity === 'rare') ? ` (${itemRarity})` : '';
+    // Stop conditions:
+    // 1. If no user max value is set, stop after one item
+    // 2. If we've reached the target item count
+    // 3. If we've hit the safety limit
+    if (!userMaxValue || attempts >= targetItemCount || attempts >= MAX_REROLL_ATTEMPTS) {
+      break;
+    }
+  }
 
-    const finalItemName = `${modifierPrefix}${result.item.name} (${result.totalValue}gp)${rarityText}`;
+  // Output all results
+  if (results.length > 0) {
+    for (const result of results) {
+      // Build the final item name with modifiers as prefix
+      const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
 
-    // Output the breadcrumb trail and the selected item's name
-    console.log(`${result.breadcrumb.join(' > ')} > ${finalItemName}`);
+      // Add rarity to the output if it's uncommon or rare
+      const itemRarity = result.item.rarity || 'common';
+      const rarityText = (itemRarity === 'uncommon' || itemRarity === 'rare') ? ` (${itemRarity})` : '';
+
+      const finalItemName = `${modifierPrefix}${result.item.name} (${result.totalValue}gp)${rarityText}`;
+
+      // Output the breadcrumb trail and the selected item's name
+      console.log(`${result.breadcrumb.join(' > ')} > ${finalItemName}`);
+    }
+
+    // Output total if multiple items were rolled
+    if (userMaxValue && results.length > 1) {
+      console.log(`Total: ${accumulatedValue}gp / ${userMaxValue}gp (${results.length} items)`);
+    }
   } else {
     console.error('Error: Could not generate a valid result');
   }
