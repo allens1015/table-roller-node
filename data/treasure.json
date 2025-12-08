@@ -1,0 +1,12 @@
+[
+    {
+        "name":"treasure_f",
+        "type":"table",
+        "weight":1
+    },
+    {
+        "name":"treasure_g",
+        "type":"table",
+        "weight":1
+    }
+]

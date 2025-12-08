@@ -4,6 +4,15 @@ const fs = require('fs');
 const path = require('path');
 const minimist = require('minimist');
 
+// Global configuration object to store command-line flags and settings
+const config = {
+  userApproxValue: null,      // The -v value (used for filtering tiers when --max is set)
+  filterApproxValue: null,    // The approx_value tier to select from (set to userApproxValue when --max is used)
+  actualSetApproxValue: null, // The actual approx_value of the selected set (found after filtering)
+  rareChance: 10,
+  uncommonChance: 20,
+};
+
 // Function to parse and roll dice notation (e.g., "2d4", "1d6", "3d10")
 // Supports arithmetic operations: "2d4*10", "2d4/10", etc.
 function rollDice(notation) {
@@ -63,6 +72,17 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
     return allowedRarities.includes(rarity);
   });
 
+  // If filterApproxValue is set, also filter by items that have matching approx_value in nested tables
+  // This is only relevant for table references (type:"table")
+  if (config.filterApproxValue !== null && filteredItems.length > 0) {
+    // Check if any items are table references
+    const hasTableReferences = filteredItems.some(item => item.type === 'table' && !item.items);
+    if (hasTableReferences) {
+      // For table references, we want to keep them all and let the nested rollTable handle filtering
+      // So we don't filter here, just pass through
+    }
+  }
+
   // If no items match the allowed rarities, fall back to all items
   const itemsToUse = filteredItems.length > 0 ? filteredItems : items;
 
@@ -72,15 +92,15 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
       // For bare arrays, use weight 1 as default
       return sum + 1;
     }
-    // For objects with 'items' property or regular items, use their weight
-    return sum + item.weight;
+    // For objects with 'items' property or regular items, use their weight (default to 1 if not specified)
+    return sum + (item.weight || 1);
   }, 0);
 
   const random = Math.floor(Math.random() * totalWeight);
 
   let currentWeight = 0;
   for (const item of itemsToUse) {
-    const itemWeight = Array.isArray(item) ? 1 : item.weight;
+    const itemWeight = Array.isArray(item) ? 1 : (item.weight || 1);
     currentWeight += itemWeight;
     if (random < currentWeight) {
       return item;
@@ -89,14 +109,8 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
 }
 
 // Helper function to process a single selected item through tables and modifiers
-function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities) {
-  // Check if user max value is exceeded by this selection's max_value or min_value
-  if (userMaxValue && selectedItem.max_value && selectedItem.max_value > userMaxValue) {
-    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
-  }
-  if (userMaxValue !== null && selectedItem.min_value && selectedItem.min_value > userMaxValue) {
-    return { item: null, breadcrumb, modifiers, totalValue, maxValue, exceeded: true, finalItemTable };
-  }
+function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, finalItemTable) {
+  // No budget validation - just process the item
 
   // Track modifiers that need special processing (like special_materials)
   const pendingSpecialModifiers = [];
@@ -125,21 +139,25 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
       totalValue += rollDice(selectedItem.value);
     }
 
-    // If this item has a max_value, set it for validation later
-    if (selectedItem.max_value) {
-      maxValue = selectedItem.max_value;
-    }
-
-    const nestedTablePath = path.join(__dirname, 'data', `${selectedItem.name}.json`);
-    const nestedTableData = JSON.parse(fs.readFileSync(nestedTablePath, 'utf8'));
-
     // Track which table we're about to roll on - this becomes our finalItemTable
     finalItemTable = selectedItem.name;
 
-    selectedItem = weightedRandom(nestedTableData, allowedRarities);
+    // Recursively roll on the nested table
+    // This ensures that filterApproxValue is applied to nested tables too
+    // Pass empty breadcrumb since rollTable will add the table name
+    const nestedResult = rollTable(selectedItem.name, breadcrumb.slice(), modifiers, totalValue, finalItemTable);
+
+    // If it's a set, we need to handle it differently - just return the set result
+    if (nestedResult.isSet) {
+      return nestedResult;
+    }
+
+    // Otherwise, use the nested result's item - the value is already included in totalValue
+    // So we just return the nested result directly without adding the value again
+    return nestedResult;
   }
 
-  // Add the final item's value to the total
+  // Add the final item's value to the total (only for non-table items)
   // Support dice notation (e.g., "2d4") or numeric values
   if (selectedItem.value) {
     let rolledValue;
@@ -203,38 +221,42 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
     totalValue = Math.floor(totalValue * materialMultiplier);
   }
 
-  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, exceeded: false, finalItemTable };
+  return { item: selectedItem, breadcrumb, modifiers, totalValue, finalItemTable };
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, userMaxValue = null, finalItemTable = null, rareChance = 10, uncommonChance = 20, filterMaxValue = null) {
-  breadcrumb.push(tableName);
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, finalItemTable = null) {
+  // Only add to breadcrumb if it's not already the last entry (avoid duplicates)
+  if (breadcrumb.length === 0 || breadcrumb[breadcrumb.length - 1] !== tableName) {
+    breadcrumb.push(tableName);
+  }
 
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
   let tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
 
-  // Filter by max_value if specified
-  if (filterMaxValue !== null) {
-    // Find all items with max_value <= filterMaxValue
+  // Filter by approx_value if specified (using global config)
+  if (config.filterApproxValue !== null) {
+    // Find all items with approx_value <= filterApproxValue
     const validItems = tableData.filter(item => {
-      return item.max_value && item.max_value <= filterMaxValue;
+      return item.approx_value && item.approx_value <= config.filterApproxValue;
     });
 
     if (validItems.length > 0) {
-      // Find the highest max_value among valid items (closest to filterMaxValue)
-      const closestMaxValue = Math.max(...validItems.map(item => item.max_value));
-      // Filter to only items with that max_value
-      tableData = validItems.filter(item => item.max_value === closestMaxValue);
+      // Find the highest approx_value among valid items (closest to filterApproxValue)
+      const closestApproxValue = Math.max(...validItems.map(item => item.approx_value));
+      config.actualSetApproxValue = closestApproxValue;  // Store the actual tier selected
+      // Filter to only items with that approx_value
+      tableData = validItems.filter(item => item.approx_value === closestApproxValue);
     }
   }
 
-  // Determine allowed rarities based on random roll
+  // Determine allowed rarities based on random roll (using global config)
   // Each rarity gets an exclusive percentage chance
   const rarityRoll = Math.random() * 100;
   let allowedRarities = ['common'];
-  if (rarityRoll < rareChance) {
+  if (rarityRoll < config.rareChance) {
     // Rare chance: only rare items
     allowedRarities = ['rare'];
-  } else if (rarityRoll < rareChance + uncommonChance) {
+  } else if (rarityRoll < config.rareChance + config.uncommonChance) {
     // Uncommon chance: only uncommon items
     allowedRarities = ['uncommon'];
   } else {
@@ -263,157 +285,61 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     for (const itemInSet of itemsToProcess) {
       // Process this item as if it were selected directly
-      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities);
+      // Each item in a set should start with totalValue=0, not accumulate from previous items
+      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), 0, finalItemTable);
       if (itemResult) {
         setResults.push(itemResult);
         setTotalValue += itemResult.totalValue;
       }
     }
 
-    // Check if the wrapper object has a max_value for the entire set
-    if (selectedItem.max_value && setTotalValue > selectedItem.max_value) {
-      // The total set value exceeds the max, mark as exceeded
-      return { isSet: true, setResults: [], exceeded: true, maxValue: selectedItem.max_value };
-    }
-
     // Return a special marker indicating this is a set of results
+    // No budget validation - just return the set with whatever values were rolled
     return { isSet: true, setResults };
   }
 
   // Process the single selected item
-  return processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, userMaxValue, finalItemTable, allowedRarities);
+  return processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, finalItemTable);
 }
 
 // Parse command line arguments
 const argv = minimist(process.argv.slice(2));
 const originTable = argv.o || argv.origin || 'armor';
 const numberOfResults = argv.n || argv.number || 1;
-const userMaxValue = argv.v || argv.value || null;
-const rareChance = argv.r || argv.rare || 10;  // Default 10%
-const uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
-const useMaxFilter = argv.max !== undefined;  // Whether to filter by max_value
-const filterMaxValue = useMaxFilter ? userMaxValue : null;  // Use userMaxValue for filtering when --max is set
 
-// Maximum number of reroll attempts to avoid infinite loops
-const MAX_REROLL_ATTEMPTS = 100;
-// Hard limit on total items output
-const MAX_ITEMS_OUTPUT = 100;
-
-// Determine target number of items and how many result sets
-// If -v is set, we create ONE result set with multiple items
-// If -v is NOT set, we create multiple result sets (one item each)
-const createMultipleResultSets = !userMaxValue;
-const numResultSets = createMultipleResultSets ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : 1;
-// When -v is set: if -n is also set, use -n as target, otherwise use MAX to fill budget
-// When -v is NOT set: just use 1 item per result set
-const targetItemCount = userMaxValue
-  ? (numberOfResults > 1 ? Math.min(numberOfResults, MAX_ITEMS_OUTPUT) : Math.min(MAX_REROLL_ATTEMPTS, MAX_ITEMS_OUTPUT))
-  : 1;
+// Populate global config object
+config.userApproxValue = argv.v || argv.value || null;
+config.rareChance = argv.r || argv.rare || 10;  // Default 10%
+config.uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
+const useMaxFilter = argv.max !== undefined;  // Whether to filter by approx_value
+config.filterApproxValue = useMaxFilter ? config.userApproxValue : null;  // Use userApproxValue for filtering when --max is set
 
 // Roll the specified number of times
-for (let i = 0; i < numResultSets; i++) {
+for (let i = 0; i < numberOfResults; i++) {
   const results = [];
   let accumulatedValue = 0;
-  let attempts = 0;
 
-  // Keep rolling and accumulating items until we can't add more without exceeding the limit
-  while (true) {
-    let result;
-    let rollAttempts = 0;
+  // Roll once - no reroll logic, no budget validation
+  const result = rollTable(originTable, [], [], 0, null);
 
-    // Try to roll a single item (or set of items) that fits within remaining budget
-    do {
-      const remainingBudget = userMaxValue ? userMaxValue - accumulatedValue : null;
-      result = rollTable(originTable, [], [], 0, null, remainingBudget, null, rareChance, uncommonChance, filterMaxValue);
-      rollAttempts++;
-
-      // Check if we need to reroll
-      let shouldReroll = false;
-
-      // If this is a set of results, check if any item in the set needs rerolling
-      if (result.isSet) {
-        // Check if the set itself was marked as exceeded (wrapper's max_value exceeded)
-        if (result.exceeded) {
-          shouldReroll = true;
-        } else {
-          // Check if any item in the set exceeds constraints
-          let totalSetValue = 0;
-          let setExceeded = false;
-
-          for (const setItem of result.setResults) {
-            if (setItem.exceeded) {
-              setExceeded = true;
-              break;
-            }
-            if (setItem.maxValue && setItem.totalValue > setItem.maxValue) {
-              setExceeded = true;
-              break;
-            }
-            totalSetValue += setItem.totalValue;
-          }
-
-          if (setExceeded || (remainingBudget && totalSetValue > remainingBudget)) {
-            shouldReroll = true;
-          }
-        }
-      } else {
-        // Single item - existing logic
-        if (result.exceeded) {
-          shouldReroll = true;
-        }
-        else if (result.maxValue && result.totalValue > result.maxValue) {
-          shouldReroll = true;
-        }
-        else if (remainingBudget && result.totalValue > remainingBudget) {
-          shouldReroll = true;
-        }
-      }
-
-      if (shouldReroll) {
-        if (rollAttempts >= MAX_REROLL_ATTEMPTS) {
-          // Give up after max attempts
-          result = null;
-          break;
-        }
-        // Otherwise continue the loop to reroll
-      } else {
-        // Valid result, break out of the loop
-        break;
-      }
-    } while (true);
-
-    // If we couldn't find a valid item, stop trying to add more
-    if (!result || (result.isSet && result.setResults.length === 0) || (!result.isSet && !result.item)) {
-      break;
+  // Process the result
+  if (result.isSet) {
+    // Add all items from the set
+    for (const setItem of result.setResults) {
+      results.push(setItem);
+      accumulatedValue += setItem.totalValue;
     }
-
-    // Add this result to our collection
-    if (result.isSet) {
-      // Add all items from the set
-      for (const setItem of result.setResults) {
-        results.push(setItem);
-        accumulatedValue += setItem.totalValue;
-        attempts++;
-      }
-    } else {
-      // Add single item
-      results.push(result);
-      accumulatedValue += result.totalValue;
-      attempts++;
-    }
-
-    // Stop conditions:
-    // 1. If no user max value is set, stop after one item
-    // 2. If we've reached the target item count
-    // 3. If we've hit the safety limit
-    if (!userMaxValue || attempts >= targetItemCount || attempts >= MAX_REROLL_ATTEMPTS) {
-      break;
-    }
+  } else if (result.item) {
+    // Add single item
+    results.push(result);
+    accumulatedValue += result.totalValue;
   }
 
   // Output all results
   if (results.length > 0) {
-    for (const result of results) {
+    for (let idx = 0; idx < results.length; idx++) {
+      const result = results[idx];
+
       // Build the final item name with modifiers as prefix
       const modifierPrefix = result.modifiers.length > 0 ? result.modifiers.join(' ') + ' ' : '';
 
@@ -452,8 +378,8 @@ for (let i = 0; i < numResultSets; i++) {
     }
 
     // Output total if multiple items were rolled
-    if (userMaxValue && results.length > 1) {
-      console.log(`Total: ${accumulatedValue}gp / ${userMaxValue}gp (${results.length} items)`);
+    if (results.length > 1) {
+      console.log(`Total: ${accumulatedValue}gp (${results.length} items)`);
     }
   } else {
     console.error('Error: Could not generate a valid result');
