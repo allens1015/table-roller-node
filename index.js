@@ -109,7 +109,7 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
 }
 
 // Helper function to process a single selected item through tables and modifiers
-function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, finalItemTable) {
+function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, finalItemTable) {
   // No budget validation - just process the item
 
   // Track modifiers that need special processing (like special_materials)
@@ -139,18 +139,13 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
       totalValue += rollDice(selectedItem.value);
     }
 
-    // If this item has a max_value, set it for validation later
-    if (selectedItem.max_value) {
-      maxValue = selectedItem.max_value;
-    }
-
     // Track which table we're about to roll on - this becomes our finalItemTable
     finalItemTable = selectedItem.name;
 
     // Recursively roll on the nested table
     // This ensures that filterApproxValue is applied to nested tables too
     // Pass empty breadcrumb since rollTable will add the table name
-    const nestedResult = rollTable(selectedItem.name, breadcrumb.slice(), modifiers, totalValue, maxValue, finalItemTable);
+    const nestedResult = rollTable(selectedItem.name, breadcrumb.slice(), modifiers, totalValue, finalItemTable);
 
     // If it's a set, we need to handle it differently - just return the set result
     if (nestedResult.isSet) {
@@ -226,10 +221,10 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
     totalValue = Math.floor(totalValue * materialMultiplier);
   }
 
-  return { item: selectedItem, breadcrumb, modifiers, totalValue, maxValue, finalItemTable };
+  return { item: selectedItem, breadcrumb, modifiers, totalValue, finalItemTable };
 }
 
-function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, maxValue = null, finalItemTable = null) {
+function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, finalItemTable = null) {
   // Only add to breadcrumb if it's not already the last entry (avoid duplicates)
   if (breadcrumb.length === 0 || breadcrumb[breadcrumb.length - 1] !== tableName) {
     breadcrumb.push(tableName);
@@ -291,7 +286,7 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
     for (const itemInSet of itemsToProcess) {
       // Process this item as if it were selected directly
       // Each item in a set should start with totalValue=0, not accumulate from previous items
-      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), 0, maxValue, finalItemTable);
+      const itemResult = processSelectedItem(itemInSet, breadcrumb.slice(), modifiers.slice(), 0, finalItemTable);
       if (itemResult) {
         setResults.push(itemResult);
         setTotalValue += itemResult.totalValue;
@@ -300,11 +295,11 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     // Return a special marker indicating this is a set of results
     // No budget validation - just return the set with whatever values were rolled
-    return { isSet: true, setResults, maxValue: selectedItem.approx_value };
+    return { isSet: true, setResults };
   }
 
   // Process the single selected item
-  return processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, maxValue, finalItemTable);
+  return processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, finalItemTable);
 }
 
 // Parse command line arguments
@@ -325,7 +320,7 @@ for (let i = 0; i < numberOfResults; i++) {
   let accumulatedValue = 0;
 
   // Roll once - no reroll logic, no budget validation
-  const result = rollTable(originTable, [], [], 0, null, null);
+  const result = rollTable(originTable, [], [], 0, null);
 
   // Process the result
   if (result.isSet) {
