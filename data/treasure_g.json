@@ -17,7 +17,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 50
+        "approx_value": 50
     },
     {
         "items": [
@@ -35,7 +35,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 75
+        "approx_value": 75
     },
     {
         "items": [
@@ -52,7 +52,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 100
+        "approx_value": 100
     },
     {
         "items": [
@@ -65,7 +65,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 150
+        "approx_value": 150
     },
     {
         "items": [
@@ -82,7 +82,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 200
+        "approx_value": 200
     },
     {
         "items": [
@@ -95,7 +95,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 250
+        "approx_value": 250
     },
     {
         "items": [
@@ -124,6 +124,6 @@
                 "type":"table"
             }
         ],
-        "max_value": 500
+        "approx_value": 500
     }
 ]

@@ -6,9 +6,9 @@ const minimist = require('minimist');
 
 // Global configuration object to store command-line flags and settings
 const config = {
-  userMaxValue: null,        // The budget for accumulating items (-v value)
-  filterMaxValue: null,       // The max_value tier to select from (also -v value when --max is set)
-  actualSetMaxValue: null,    // The actual max_value of the selected set (found after filtering)
+  userApproxValue: null,      // The -v value (used for filtering tiers when --max is set)
+  filterApproxValue: null,    // The approx_value tier to select from (set to userApproxValue when --max is used)
+  actualSetApproxValue: null, // The actual approx_value of the selected set (found after filtering)
   rareChance: 10,
   uncommonChance: 20,
 };
@@ -72,9 +72,9 @@ function weightedRandom(items, allowedRarities = ['common', 'uncommon', 'rare'])
     return allowedRarities.includes(rarity);
   });
 
-  // If filterMaxValue is set, also filter by items that have matching max_value in nested tables
+  // If filterApproxValue is set, also filter by items that have matching approx_value in nested tables
   // This is only relevant for table references (type:"table")
-  if (config.filterMaxValue !== null && filteredItems.length > 0) {
+  if (config.filterApproxValue !== null && filteredItems.length > 0) {
     // Check if any items are table references
     const hasTableReferences = filteredItems.some(item => item.type === 'table' && !item.items);
     if (hasTableReferences) {
@@ -148,7 +148,7 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, ma
     finalItemTable = selectedItem.name;
 
     // Recursively roll on the nested table
-    // This ensures that filterMaxValue is applied to nested tables too
+    // This ensures that filterApproxValue is applied to nested tables too
     // Pass empty breadcrumb since rollTable will add the table name
     const nestedResult = rollTable(selectedItem.name, breadcrumb.slice(), modifiers, totalValue, maxValue, finalItemTable);
 
@@ -238,19 +238,19 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
   const tablePath = path.join(__dirname, 'data', `${tableName}.json`);
   let tableData = JSON.parse(fs.readFileSync(tablePath, 'utf8'));
 
-  // Filter by max_value if specified (using global config)
-  if (config.filterMaxValue !== null) {
-    // Find all items with max_value <= filterMaxValue
+  // Filter by approx_value if specified (using global config)
+  if (config.filterApproxValue !== null) {
+    // Find all items with approx_value <= filterApproxValue
     const validItems = tableData.filter(item => {
-      return item.max_value && item.max_value <= config.filterMaxValue;
+      return item.approx_value && item.approx_value <= config.filterApproxValue;
     });
 
     if (validItems.length > 0) {
-      // Find the highest max_value among valid items (closest to filterMaxValue)
-      const closestMaxValue = Math.max(...validItems.map(item => item.max_value));
-      config.actualSetMaxValue = closestMaxValue;  // Store the actual tier selected
-      // Filter to only items with that max_value
-      tableData = validItems.filter(item => item.max_value === closestMaxValue);
+      // Find the highest approx_value among valid items (closest to filterApproxValue)
+      const closestApproxValue = Math.max(...validItems.map(item => item.approx_value));
+      config.actualSetApproxValue = closestApproxValue;  // Store the actual tier selected
+      // Filter to only items with that approx_value
+      tableData = validItems.filter(item => item.approx_value === closestApproxValue);
     }
   }
 
@@ -300,7 +300,7 @@ function rollTable(tableName, breadcrumb = [], modifiers = [], totalValue = 0, m
 
     // Return a special marker indicating this is a set of results
     // No budget validation - just return the set with whatever values were rolled
-    return { isSet: true, setResults, maxValue: selectedItem.max_value };
+    return { isSet: true, setResults, maxValue: selectedItem.approx_value };
   }
 
   // Process the single selected item
@@ -313,11 +313,11 @@ const originTable = argv.o || argv.origin || 'armor';
 const numberOfResults = argv.n || argv.number || 1;
 
 // Populate global config object
-config.userMaxValue = argv.v || argv.value || null;
+config.userApproxValue = argv.v || argv.value || null;
 config.rareChance = argv.r || argv.rare || 10;  // Default 10%
 config.uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
-const useMaxFilter = argv.max !== undefined;  // Whether to filter by max_value
-config.filterMaxValue = useMaxFilter ? config.userMaxValue : null;  // Use userMaxValue for filtering when --max is set
+const useMaxFilter = argv.max !== undefined;  // Whether to filter by approx_value
+config.filterApproxValue = useMaxFilter ? config.userApproxValue : null;  // Use userApproxValue for filtering when --max is set
 
 // Roll the specified number of times
 for (let i = 0; i < numberOfResults; i++) {

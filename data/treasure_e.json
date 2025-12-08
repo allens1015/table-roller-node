@@ -3,7 +3,7 @@
     "name":"light_armor",
     "modifier":"masterwork",
     "value":150,
-    "max_value":200,
+    "approx_value":200,
     "weight":1,
     "type":"table"
   },
@@ -11,7 +11,7 @@
     "name":"med_armor",
     "modifier":"masterwork",
     "value":150,
-    "max_value":300,
+    "approx_value":300,
     "weight":1,
     "type":"table"
   },
@@ -19,7 +19,7 @@
     "name":"heavy_armor",
     "modifier":"masterwork",
     "value":150,
-    "max_value":1000,
+    "approx_value":1000,
     "weight":1,
     "type":"table"
   },
@@ -28,7 +28,7 @@
     "modifier":"masterwork",
     "value":150,
     "weight":1,
-    "max_value":200,
+    "approx_value":200,
     "type":"table"
   }
 ]

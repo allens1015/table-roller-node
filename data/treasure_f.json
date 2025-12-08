@@ -18,7 +18,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 50
+        "approx_value": 50
     },
     {
         "weight":1,
@@ -45,7 +45,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 250
+        "approx_value": 250
     },
     {
         "weight":1,
@@ -72,7 +72,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 350
+        "approx_value": 350
     },
     {
         "weight":1,
@@ -99,7 +99,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 400
+        "approx_value": 400
     },
     {
         "weight":1,
@@ -115,7 +115,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 500
+        "approx_value": 500
     },
     {
         "weight":1,
@@ -146,7 +146,7 @@
                 "type":"table"
             }
         ],
-        "max_value": 750
+        "approx_value": 750
     },
     {
         "weight":1,
@@ -158,6 +158,6 @@
                 "type":"table"
             }
         ],
-        "max_value": 1000
+        "approx_value": 1000
     }
 ]
