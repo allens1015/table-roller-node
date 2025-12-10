@@ -14,10 +14,26 @@ const config = {
 };
 
 // Function to parse and roll dice notation (e.g., "2d4", "1d6", "3d10")
-// Supports arithmetic operations: "2d4*10", "2d4/10", etc.
+// Supports arithmetic operations: "2d4*10", "2d4/10", "2d4+5", "2d4-3", etc.
 function rollDice(notation) {
   if (typeof notation !== 'string') {
     return notation; // If it's already a number, return it
+  }
+
+  // Check for addition (e.g., "2d4+5")
+  const addMatch = notation.match(/^(\d+d\d+)\s*\+\s*(\d+(?:\.\d+)?)$/i);
+  if (addMatch) {
+    const [, diceNotation, addend] = addMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll + parseFloat(addend);
+  }
+
+  // Check for subtraction (e.g., "2d4-3")
+  const subMatch = notation.match(/^(\d+d\d+)\s*-\s*(\d+(?:\.\d+)?)$/i);
+  if (subMatch) {
+    const [, diceNotation, subtrahend] = subMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll - parseFloat(subtrahend);
   }
 
   // Check for multiplication (e.g., "2d4*10")
@@ -176,6 +192,13 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, fi
       }
     } else {
       rolledValue = rollDice(selectedItem.value);
+    }
+
+    // Add bonus_value if it exists (for items like gemstones with variable value)
+    if (selectedItem.bonus_value) {
+      const bonusRoll = rollDice(selectedItem.bonus_value);
+      selectedItem.bonusValue = bonusRoll;
+      rolledValue += bonusRoll;
     }
 
     totalValue += rolledValue;
@@ -364,6 +387,11 @@ for (let i = 0; i < numberOfResults; i++) {
           unitAbbrev = 'gp';
         }
         valueDisplay = `${result.item.displayQuantity}${unitAbbrev} > ${result.totalValue}gp`;
+      }
+      // Show bonus_value if it exists (for items like gemstones)
+      else if (result.item.bonusValue !== undefined && result.item.bonus_value) {
+        const baseValue = result.item.value;
+        valueDisplay = `${baseValue} + ${result.item.bonus_value} = ${result.totalValue}gp`;
       }
       // Otherwise show the dice notation if it was rolled
       else if (result.item.rolledValue !== undefined && typeof result.item.value === 'string' && result.item.value.match(/\d+d\d+/i)) {

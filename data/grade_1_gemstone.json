@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Agate",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Alabaster",
+    "weight": 6,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Azurite",
+    "weight": 7,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Hematite",
+    "weight": 6,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Lapis lazuli",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Malachite",
+    "weight": 6,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Obsidian",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Pearl, irregular freshwater",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Pyrite",
+    "weight": 6,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Rhodochrosite",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Quartz, rock crystal",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Shell",
+    "weight": 6,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Tigereye",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  },
+  {
+    "name": "Turquoise",
+    "weight": 8,
+    "value": 5,
+    "bonus_value": "2d4"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Amber",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Amethyst",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Chrysoberyl",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Coral",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Garnet",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Jade",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Jet",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Pearl, saltwater",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Spinel, deep blue",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  },
+  {
+    "name": "Tourmaline",
+    "value": 50,
+    "bonus_value": "2d4*10"
+  }
+]
