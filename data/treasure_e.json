@@ -1,6 +1,6 @@
 [
   {
-    "name":"light_armor",
+    "name":"light_armor_or_shield",
     "modifier":"masterwork",
     "value":150,
     "approx_value":200,
@@ -21,14 +21,6 @@
     "value":150,
     "approx_value":1000,
     "weight":1,
-    "type":"table"
-  },
-  {
-    "name":"shields",
-    "modifier":"masterwork",
-    "value":150,
-    "weight":1,
-    "approx_value":200,
     "type":"table"
   }
 ]
