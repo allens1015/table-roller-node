@@ -1,8 +1,672 @@
 [
-    {
-     "name":"Club",
-     "value":0,
-     "weight":1,
-     "type":"item"
-    }
+  {
+    "name": "Battle aspergillum",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Brass knife",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Brass knuckles",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Cestus",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Dagger",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Gauntlet",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Hanbo",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Hook hand",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Kunai",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Light mace",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Punching dagger",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Sickle",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Spider-leg sickle",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Spiked gauntlet",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Spring blade",
+    "value": 70,
+    "type": "item"
+  },
+  {
+    "name": "Traveling kettle",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Baston fighting stick",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Heavy mace",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Mere club",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Morningstar",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Shortspear",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Blade boot",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Boarding axe",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Butterfly sword",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Cat-o'-nine-tails",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Dogslicer",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Dueling dagger",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Gladius",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Handaxe",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Iron brush",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Jutte",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Katar, tri-bladed",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Kerambit",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Kukri",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Light hammer",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Light pick",
+    "value": 4,
+    "type": "item"
+  },
+  {
+    "name": "Lungchuan tamo",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Machete",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Sap",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Sea-knife",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Shang gou",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Short sword",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Starknife",
+    "value": 24,
+    "type": "item"
+  },
+  {
+    "name": "Switchblade knife",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Tailblade, ratfolk",
+    "value": 11,
+    "type": "item"
+  },
+  {
+    "name": "Throwing axe",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Tonfa",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "War razor",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Ankus",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Battleaxe",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Combat scabbard",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Combat scabbard, sharpened",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Cutlass",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Double chicken saber",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Gandasa",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Heavy pick",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Klar",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Light flail",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Longsword",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Manople",
+    "value": 17,
+    "type": "item"
+  },
+  {
+    "name": "Nine-ring broadsword",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Rapier",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Scimitar",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Scizore",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Sibat",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Sword cane",
+    "value": 45,
+    "type": "item"
+  },
+  {
+    "name": "Terbutje",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Terbutje, steel",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Trident",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Warhammer",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Aklys",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Axe-gauntlet, dwarven light",
+    "value": 16,
+    "type": "item"
+  },
+  {
+    "name": "Barbazu beard",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Battle poi",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Bich'hwa",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Butterfly knife",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Deer horn knife",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Dwarven maulaxe",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Elven leafblade",
+    "value": 40,
+    "type": "item"
+  },
+  {
+    "name": "Emei piercer",
+    "value": 3,
+    "type": "item"
+  },
+  {
+    "name": "Fighting fan",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Flying talon",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Gnome pincher",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Halfling rope-shot",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Helmet, dwarven boulder",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Kama",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Kasatha spinal sword",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Knuckle axe",
+    "value": 9,
+    "type": "item"
+  },
+  {
+    "name": "Nunchaku",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Pata",
+    "value": 14,
+    "type": "item"
+  },
+  {
+    "name": "Quadrens",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Razor, drow",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Sai",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Sanpkhang",
+    "value": 60,
+    "type": "item"
+  },
+  {
+    "name": "Scorpion whip",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Siangham",
+    "value": 3,
+    "type": "item"
+  },
+  {
+    "name": "Sica",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Swordbreaker dagger",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Tekko-kagi",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Thorn bracer",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Wakizashi",
+    "value": 35,
+    "type": "item"
+  },
+  {
+    "name": "War-shield, dwarven",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Waveblade",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Aldori dueling sword",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Axe-gauntlet, dwarven heavy",
+    "value": 21,
+    "type": "item"
+  },
+  {
+    "name": "Bastard sword",
+    "value": 35,
+    "type": "item"
+  },
+  {
+    "name": "Broken-back seax",
+    "value": 40,
+    "type": "item"
+  },
+  {
+    "name": "Doru",
+    "value": 4,
+    "type": "item"
+  },
+  {
+    "name": "Dwarven double waraxe",
+    "value": 60,
+    "type": "item"
+  },
+  {
+    "name": "Dwarven waraxe",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Elven thornblade",
+    "value": 60,
+    "type": "item"
+  },
+  {
+    "name": "Estoc",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Falcata",
+    "value": 18,
+    "type": "item"
+  },
+  {
+    "name": "Flindbar",
+    "value": 9,
+    "type": "item"
+  },
+  {
+    "name": "Gnome flick-mace",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Great terbutje",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Hooked axe",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Katana",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Khopesh",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Knobkerrie",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Nine-section whip",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Ram hammer, dwarven",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Rhoka sword",
+    "value": 25,
+    "type": "item"
+  },
+  {
+    "name": "Sawtooth sabre",
+    "value": 35,
+    "type": "item"
+  },
+  {
+    "name": "Shotel",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Sickle-sword",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Spiral rapier",
+    "value": 80,
+    "type": "item"
+  },
+  {
+    "name": "Split-blade sword",
+    "value": 200,
+    "type": "item"
+  },
+  {
+    "name": "Taiaha",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Temple sword",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Tongi",
+    "value": 18,
+    "type": "item"
+  },
+  {
+    "name": "Urumi",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Wahaika",
+    "value": 3,
+    "type": "item"
+  },
+  {
+    "name": "Whip",
+    "value": 1,
+    "type": "item"
+  }
 ]
