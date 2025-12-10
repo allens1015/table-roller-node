@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Diamond, small",
+    "weight": 25,
+    "value": 500,
+    "bonus_value": "2d4*100"
+  },
+  {
+    "name": "Emerald",
+    "weight": 25,
+    "value": 500,
+    "bonus_value": "2d4*100"
+  },
+  {
+    "name": "Ruby, small",
+    "weight": 25,
+    "value": 500,
+    "bonus_value": "2d4*100"
+  },
+  {
+    "name": "Sapphire",
+    "weight": 25,
+    "value": 500,
+    "bonus_value": "2d4*100"
+  }
+]

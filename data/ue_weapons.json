@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Bastard sword",
+    "value": 35,
+    "type": "item"
+  },
+  {
+    "name": "Battleaxe",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Bolas",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Club",
+    "value": 0,
+    "type": "item"
+  },
+  {
+    "name": "Composite longbow",
+    "value": 100,
+    "type": "item"
+  },
+  {
+    "name": "Composite shortbow",
+    "value": 75,
+    "type": "item"
+  },
+  {
+    "name": "Dagger",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Dwarven waraxe",
+    "value": 30,
+    "type": "item"
+  },
+  {
+    "name": "Falchion",
+    "value": 75,
+    "type": "item"
+  },
+  {
+    "name": "Gauntlet",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Glaive",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Greataxe",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Greatclub",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Greatsword",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Halberd",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Handaxe",
+    "value": 6,
+    "type": "item"
+  },
+  {
+    "name": "Heavy crossbow",
+    "value": 50,
+    "type": "item"
+  },
+  {
+    "name": "Heavy flail",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Heavy mace",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Lance",
+    "value": 10,
+    "type": "item"
+  },
+  {
+    "name": "Light crossbow",
+    "value": 35,
+    "type": "item"
+  },
+  {
+    "name": "Light flail",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Light hammer",
+    "value": 1,
+    "type": "item"
+  },
+  {
+    "name": "Light mace",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Light pick",
+    "value": 4,
+    "type": "item"
+  },
+  {
+    "name": "Longbow",
+    "value": 75,
+    "type": "item"
+  },
+  {
+    "name": "Longspear",
+    "value": 5,
+    "type": "item"
+  },
+  {
+    "name": "Longsword",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Morningstar",
+    "value": 8,
+    "type": "item"
+  },
+  {
+    "name": "Nunchaku",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Quarterstaff",
+    "value": 0,
+    "type": "item"
+  },
+  {
+    "name": "Rapier",
+    "value": 20,
+    "type": "item"
+  },
+  {
+    "name": "Spear",
+    "value": 2,
+    "type": "item"
+  },
+  {
+    "name": "Trident",
+    "value": 15,
+    "type": "item"
+  },
+  {
+    "name": "Warhammer",
+    "value": 12,
+    "type": "item"
+  },
+  {
+    "name": "Whip",
+    "value": 1,
+    "type": "item"
+  }
+]

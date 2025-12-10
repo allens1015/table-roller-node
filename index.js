@@ -14,10 +14,26 @@ const config = {
 };
 
 // Function to parse and roll dice notation (e.g., "2d4", "1d6", "3d10")
-// Supports arithmetic operations: "2d4*10", "2d4/10", etc.
+// Supports arithmetic operations: "2d4*10", "2d4/10", "2d4+5", "2d4-3", etc.
 function rollDice(notation) {
   if (typeof notation !== 'string') {
     return notation; // If it's already a number, return it
+  }
+
+  // Check for addition (e.g., "2d4+5")
+  const addMatch = notation.match(/^(\d+d\d+)\s*\+\s*(\d+(?:\.\d+)?)$/i);
+  if (addMatch) {
+    const [, diceNotation, addend] = addMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll + parseFloat(addend);
+  }
+
+  // Check for subtraction (e.g., "2d4-3")
+  const subMatch = notation.match(/^(\d+d\d+)\s*-\s*(\d+(?:\.\d+)?)$/i);
+  if (subMatch) {
+    const [, diceNotation, subtrahend] = subMatch;
+    const baseRoll = rollDice(diceNotation); // Recursive call
+    return baseRoll - parseFloat(subtrahend);
   }
 
   // Check for multiplication (e.g., "2d4*10")
@@ -162,20 +178,30 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, fi
   if (selectedItem.value) {
     let rolledValue;
 
-    // Handle display_value for showing different units (e.g., silver, copper)
-    // If display_value exists, roll it and calculate gold value from the rolled display quantity
-    if (selectedItem.display_value) {
-      selectedItem.displayQuantity = rollDice(selectedItem.display_value);
-      // Calculate the actual gold value by dividing the display quantity appropriately
-      // For silver: displayQuantity / 10, for copper: displayQuantity / 100
-      rolledValue = selectedItem.displayQuantity / 10; // Default: silver conversion
-      if (selectedItem.name.toLowerCase().includes('copper')) {
+    // Check if the name is exactly a currency type that needs conversion
+    const nameLower = selectedItem.name.toLowerCase();
+    if (nameLower === 'copper' || nameLower === 'silver' || nameLower === 'platinum') {
+      // Roll the value and store as displayQuantity for output purposes
+      selectedItem.displayQuantity = rollDice(selectedItem.value);
+      // Convert to gold based on currency type
+      if (nameLower === 'copper') {
         rolledValue = selectedItem.displayQuantity / 100;
-      } else if (selectedItem.name.toLowerCase().includes('platinum')) {
+      } else if (nameLower === 'platinum') {
         rolledValue = selectedItem.displayQuantity * 10;
+      } else {
+        // silver
+        rolledValue = selectedItem.displayQuantity / 10;
       }
     } else {
+      // Standard gold value
       rolledValue = rollDice(selectedItem.value);
+    }
+
+    // Add bonus_value if it exists (for items like gemstones with variable value)
+    if (selectedItem.bonus_value) {
+      const bonusRoll = rollDice(selectedItem.bonus_value);
+      selectedItem.bonusValue = bonusRoll;
+      rolledValue += bonusRoll;
     }
 
     totalValue += rolledValue;
@@ -311,8 +337,8 @@ const numberOfResults = argv.n || argv.number || 1;
 config.userApproxValue = argv.v || argv.value || null;
 config.rareChance = argv.r || argv.rare || 10;  // Default 10%
 config.uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
-const useMaxFilter = argv.max !== undefined;  // Whether to filter by approx_value
-config.filterApproxValue = useMaxFilter ? config.userApproxValue : null;  // Use userApproxValue for filtering when --max is set
+// If -v is specified, automatically filter by approx_value
+config.filterApproxValue = config.userApproxValue;
 
 // Roll the specified number of times
 for (let i = 0; i < numberOfResults; i++) {
@@ -352,18 +378,24 @@ for (let i = 0; i < numberOfResults; i++) {
       let valueDisplay = `${result.totalValue}gp`;
 
       // If there's a display quantity (for currencies like silver), show the conversion
-      if (result.item.displayQuantity !== undefined && result.item.display_value) {
-        itemNameWithDice = `${result.item.display_value} ${result.item.name}`;
+      if (result.item.displayQuantity !== undefined) {
+        itemNameWithDice = `${result.item.value} ${result.item.name}`;
         // Determine the currency unit based on the name
+        const nameLower = result.item.name.toLowerCase();
         let unitAbbrev = 'sp'; // Default to silver pieces
-        if (result.item.name.toLowerCase().includes('copper')) {
+        if (nameLower === 'copper') {
           unitAbbrev = 'cp';
-        } else if (result.item.name.toLowerCase().includes('platinum')) {
+        } else if (nameLower === 'platinum') {
           unitAbbrev = 'pp';
-        } else if (result.item.name.toLowerCase().includes('gold')) {
+        } else if (nameLower === 'gold') {
           unitAbbrev = 'gp';
         }
         valueDisplay = `${result.item.displayQuantity}${unitAbbrev} > ${result.totalValue}gp`;
+      }
+      // Show bonus_value if it exists (for items like gemstones)
+      else if (result.item.bonusValue !== undefined && result.item.bonus_value) {
+        const baseValue = result.item.value;
+        valueDisplay = `${baseValue} + ${result.item.bonus_value} = ${result.totalValue}gp`;
       }
       // Otherwise show the dice notation if it was rolled
       else if (result.item.rolledValue !== undefined && typeof result.item.value === 'string' && result.item.value.match(/\d+d\d+/i)) {

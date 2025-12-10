@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Aquamarine",
+    "value": 250,
+    "bonus_value": "2d4*50"
+  },
+  {
+    "name": "Opal",
+    "value": 250,
+    "bonus_value": "2d4*50"
+  },
+  {
+    "name": "Pearl, black",
+    "value": 250,
+    "bonus_value": "2d4*50"
+  },
+  {
+    "name": "Topaz",
+    "value": 250,
+    "bonus_value": "2d4*50"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Diamond, large",
+    "value": 2500,
+    "bonus_value": "2d4*500"
+  },
+  {
+    "name": "Emerald, brilliant green",
+    "value": 2500,
+    "bonus_value": "2d4*500"
+  },
+  {
+    "name": "Ruby, large",
+    "value": 2500,
+    "bonus_value": "2d4*500"
+  },
+  {
+    "name": "Sapphire, star",
+    "value": 2500,
+    "bonus_value": "2d4*500"
+  }
+]

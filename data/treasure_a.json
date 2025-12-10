@@ -4,13 +4,11 @@
         {
             "name":"copper",
             "value":"5d10",
-            "display_value":"5d10",
             "type":"item"
         },
         {
             "name":"silver",
             "value":"3d4",
-            "display_value":"3d4",
             "type":"item"
         }
     ],
