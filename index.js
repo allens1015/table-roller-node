@@ -178,19 +178,22 @@ function processSelectedItem(selectedItem, breadcrumb, modifiers, totalValue, fi
   if (selectedItem.value) {
     let rolledValue;
 
-    // Handle display_value for showing different units (e.g., silver, copper)
-    // If display_value exists, roll it and calculate gold value from the rolled display quantity
-    if (selectedItem.display_value) {
-      selectedItem.displayQuantity = rollDice(selectedItem.display_value);
-      // Calculate the actual gold value by dividing the display quantity appropriately
-      // For silver: displayQuantity / 10, for copper: displayQuantity / 100
-      rolledValue = selectedItem.displayQuantity / 10; // Default: silver conversion
-      if (selectedItem.name.toLowerCase().includes('copper')) {
+    // Check if the name is exactly a currency type that needs conversion
+    const nameLower = selectedItem.name.toLowerCase();
+    if (nameLower === 'copper' || nameLower === 'silver' || nameLower === 'platinum') {
+      // Roll the value and store as displayQuantity for output purposes
+      selectedItem.displayQuantity = rollDice(selectedItem.value);
+      // Convert to gold based on currency type
+      if (nameLower === 'copper') {
         rolledValue = selectedItem.displayQuantity / 100;
-      } else if (selectedItem.name.toLowerCase().includes('platinum')) {
+      } else if (nameLower === 'platinum') {
         rolledValue = selectedItem.displayQuantity * 10;
+      } else {
+        // silver
+        rolledValue = selectedItem.displayQuantity / 10;
       }
     } else {
+      // Standard gold value
       rolledValue = rollDice(selectedItem.value);
     }
 
@@ -375,15 +378,16 @@ for (let i = 0; i < numberOfResults; i++) {
       let valueDisplay = `${result.totalValue}gp`;
 
       // If there's a display quantity (for currencies like silver), show the conversion
-      if (result.item.displayQuantity !== undefined && result.item.display_value) {
-        itemNameWithDice = `${result.item.display_value} ${result.item.name}`;
+      if (result.item.displayQuantity !== undefined) {
+        itemNameWithDice = `${result.item.value} ${result.item.name}`;
         // Determine the currency unit based on the name
+        const nameLower = result.item.name.toLowerCase();
         let unitAbbrev = 'sp'; // Default to silver pieces
-        if (result.item.name.toLowerCase().includes('copper')) {
+        if (nameLower === 'copper') {
           unitAbbrev = 'cp';
-        } else if (result.item.name.toLowerCase().includes('platinum')) {
+        } else if (nameLower === 'platinum') {
           unitAbbrev = 'pp';
-        } else if (result.item.name.toLowerCase().includes('gold')) {
+        } else if (nameLower === 'gold') {
           unitAbbrev = 'gp';
         }
         valueDisplay = `${result.item.displayQuantity}${unitAbbrev} > ${result.totalValue}gp`;
