@@ -1,5 +1,10 @@
 [
     {
+        "name":"treasure_a",
+        "type":"table",
+        "weight":1
+    },
+    {
         "name":"treasure_f",
         "type":"table",
         "weight":1
