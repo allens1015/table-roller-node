@@ -337,8 +337,8 @@ const numberOfResults = argv.n || argv.number || 1;
 config.userApproxValue = argv.v || argv.value || null;
 config.rareChance = argv.r || argv.rare || 10;  // Default 10%
 config.uncommonChance = argv.u || argv.uncommon || 20;  // Default 20%
-const useMaxFilter = argv.max !== undefined;  // Whether to filter by approx_value
-config.filterApproxValue = useMaxFilter ? config.userApproxValue : null;  // Use userApproxValue for filtering when --max is set
+// If -v is specified, automatically filter by approx_value
+config.filterApproxValue = config.userApproxValue;
 
 // Roll the specified number of times
 for (let i = 0; i < numberOfResults; i++) {
